@@ -1,0 +1,169 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 40px;
+    margin: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-name {
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hero Section with Animation */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Content වලට යටින් */
+}
+
+.bg-wave {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    opacity: 0.5;
+    animation: slowWave 15s ease-in-out infinite alternate;
+}
+
+@keyframes slowWave {
+    from { transform: translate(-20px, -20px) scale(1); }
+    to { transform: translate(20px, 20px) scale(1.1); }
+}
+
+/* Content Layout */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Animation එකට උඩින් */
+    display: flex;
+    width: 85%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 60px;
+}
+
+/* Left Card */
+.left-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border: 2.5px solid #00f2fe; /* Figma Cyan */
+    border-radius: 40px;
+    padding: 40px;
+    width: 450px;
+}
+
+.card-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #00f2fe;
+    margin-bottom: 20px;
+}
+
+.left-card h1 { font-size: 28px; margin-bottom: 10px; }
+.left-card h2 { font-size: 20px; color: #00f2fe; margin-bottom: 15px; }
+.left-card p { font-size: 15px; line-height: 1.6; opacity: 0.8; margin-bottom: 25px; }
+
+/* Buttons */
+.card-btns a {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.btn-git { background: #00f2fe; color: black; margin-right: 15px; }
+.btn-cv { background: linear-gradient(90deg, #ff9a9e, #fecfef); color: black; }
+
+/* Right Services */
+.right-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-box {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.service-box h3 { font-size: 18px; margin-bottom: 5px; color: #d63384; }
+.service-box p { font-size: 13px; opacity: 0.8; }
+
+.service-line {
+    width: 4px;
+    height: 30px;
+    background: white;
+    margin: 5px 0;
+}
