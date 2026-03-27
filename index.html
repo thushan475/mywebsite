@@ -1,72 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thushan's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Thushan | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
-<header>
-    <div class="logo-area">
-        <div class="profile-container">
-            <img src="assets/my2.jpeg" class="profile">
-            <span class="profile-name">Thushan</span>
-        </div>
-    </div>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#assignment">Assignment</a>
-        <a href="#project">Projects</a>
-        <a href="#service">Service</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+<!-- Custom Cursor -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
 
-<main class="hero-section" id="home">
+<!-- Navbar -->
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#assignment">Assignment</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <div class="hero-bg-wrapper">
-        <img src="assets/12.avif" class="bg-wave">
-    </div>
+<!-- Hero Section -->
+<section class="hero" id="home">
 
-    <div class="hero-content">
-        <div class="left-card">
-            <img src="assets/my2.jpeg" class="card-img">
-            <h1>Hi, I'm Thushan,</h1>
-            <h2>Web Developer & UI Designer.</h2>
-            <p>I design and build clean, responsive websites using modern web technologies.</p>
+    <!-- Background particles -->
+    <div class="particles" id="particles"></div>
 
-            <div class="card-btns">
-                <a href="#" class="btn-git">Thushan475</a>
-                <a href="#" class="btn-cv">Download CV</a>
+    <!-- Glow blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <!-- Left Content -->
+    <div class="hero-left">
+        <p class="hero-greeting">Hey, I'm Thushan,</p>
+
+        <h1 class="hero-title">
+            <span class="typed-text" id="typed"></span><span class="cursor-blink">|</span>
+        </h1>
+
+        <p class="hero-desc">
+            I design and build clean, responsive websites<br/>using modern web technologies.
+        </p>
+
+        <div class="social-section">
+            <p class="find-me">Find Me On</p>
+            <div class="social-icons">
+                <a href="#" class="social-btn instagram" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-btn facebook" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-btn pinterest" aria-label="Pinterest">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+                <a href="#" class="social-btn linkedin" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
             </div>
         </div>
 
-        <div class="right-services">
-            <div class="service-box">
-                <h3>Web Development</h3>
-                <p>Responsive and modern websites using HTML, CSS, and JS.</p>
+        <div class="hero-buttons">
+            <a href="https://github.com/Thushan475" target="_blank" class="btn btn-github">
+                <i class="fab fa-github"></i> Thushan475
+            </a>
+            <a href="#" class="btn btn-cv" download>
+                <i class="fas fa-download"></i> Download CV
+            </a>
+        </div>
+    </div>
+
+    <!-- Right Content — Image Carousel -->
+    <div class="hero-right">
+        <div class="image-frame">
+            <div class="glow-ring"></div>
+            <div class="carousel">
+                <div class="carousel-slide active">
+                    <img src="/assets/myimage1.jpeg" alt="Profile 1"/>
+                </div>
+                <div class="carousel-slide">
+                    <img src="/assets/myimage2.jpeg" alt="Profile 2"/>
+                </div>
+                <div class="carousel-slide">
+                    <img src="/assets/myimage3.jpeg" alt="Profile 3"/>
+                </div>
             </div>
-            <div class="service-line"></div>
-            <div class="service-box">
-                <h3>UI Design</h3>
-                <p>Clean and user-focused designs using Figma.</p>
-            </div>
-            <div class="service-line"></div>
-            <div class="service-box">
-                <h3>Problem Solving</h3>
-                <p>Turning complex ideas into simple solutions.</p>
+            <div class="carousel-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
             </div>
         </div>
     </div>
-</main>
 
-<section id="about" style="height: 100vh; padding: 50px; background: #111; color: white;">
-    <h1>About Me</h1>
+    <div class="diagonal-slice"></div>
+</section>
 
+<!-- Ticker Bar -->
+<div class="ticker-bar">
+    <div class="ticker-track">
+        <span><i class="fas fa-circle"></i> VISUAL DESIGN</span>
+        <span><i class="fas fa-circle"></i> UI/UX DESIGN</span>
+        <span><i class="fas fa-circle"></i> INTERACTION DESIGN</span>
+        <span><i class="fas fa-circle"></i> CREATIVE DIRECTION</span>
+        <span><i class="fas fa-circle"></i> PRODUCT STRATEGY</span>
+        <span><i class="fas fa-circle"></i> WEB DEVELOPMENT</span>
+        <span><i class="fas fa-circle"></i> VISUAL DESIGN</span>
+        <span><i class="fas fa-circle"></i> UI/UX DESIGN</span>
+        <span><i class="fas fa-circle"></i> INTERACTION DESIGN</span>
+        <span><i class="fas fa-circle"></i> CREATIVE DIRECTION</span>
+        <span><i class="fas fa-circle"></i> PRODUCT STRATEGY</span>
+        <span><i class="fas fa-circle"></i> WEB DEVELOPMENT</span>
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-wrapper">
+            <div class="about-img">
+                <div class="experience-badge">
+                    <span class="exp-num">01+</span>
+                    <span class="exp-text">Years of<br>Learning</span>
+                </div>
+                <div class="about-image-card">
+                    <img src="/assets/myimage1.jpeg" alt="About Me">
+                </div>
+            </div>
+
+            <div class="about-content">
+                <h2 class="section-title">About <span>Me</span></h2>
+                <h3 class="sub-heading">I'm a Passionate Full-Stack Learner & UI Designer</h3>
+                <p class="about-text">
+                    I am Thushan, a student at <b>MT campus</b> with a deep interest in building modern digital experiences.
+                    Currently, I'm focusing on mastering Java, Maven, and MySQL, while crafting beautiful interfaces using Figma and CSS.
+                    I love turning complex problems into simple, beautiful, and intuitive designs.
+                </p>
+
+                <div class="personal-info">
+                    <div class="info-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <div>
+                            <span>Education</span>
+                            <p>Software Engineering Student</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <span>Location</span>
+                            <p>Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#contact" class="btn btn-cv">Let's Talk!</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 </body>
