@@ -1,6 +1,4 @@
-/* ============================================
-   THUSHAN PORTFOLIO — script.js (Updated)
-   ============================================ */
+
 
 /* ── 1. Custom Cursor ───────────────────────── */
 const dot  = document.querySelector('.cursor-dot');
@@ -140,11 +138,7 @@ function createSpeedBurst(x, y, color, speed) {
 
 
 /* ── 3. Navbar Auto-Hide on Scroll ───────────── */
-/*
-   Scroll down → navbar hide.
-   Scroll up හෝ mouse top 80px ට ගියාම → show.
 
-*/
 
 // ==========================
 // Navbar hide/show on scroll
