@@ -7,6 +7,34 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+    <style>
+        /* Mouse Trail Styles */
+        .mouse-trail {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9997;
+            mix-blend-mode: screen;
+            animation: trailFade 800ms ease-out forwards;
+            box-shadow: 0 0 12px var(--pink),
+            0 0 24px var(--blue);
+        }
+
+        @keyframes trailFade {
+            to {
+                opacity: 0;
+                transform: scale(0.2) translate(var(--tx), var(--ty));
+            }
+        }
+
+        /* Hide default cursor on body */
+        body {
+            cursor: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -29,7 +57,6 @@
 
 <!-- Hero Section -->
 <section class="hero" id="home">
-
     <!-- Background particles -->
     <div class="particles" id="particles"></div>
 
@@ -42,7 +69,7 @@
         <p class="hero-greeting">Hey, I'm Thushan,</p>
 
         <h1 class="hero-title">
-            <span class="typed-text" id="typed"></span><span class="cursor-blink">|</span>
+            <span id="typed"></span><span class="cursor-blink">|</span>
         </h1>
 
         <p class="hero-desc">
@@ -77,25 +104,17 @@
         </div>
     </div>
 
-    <!-- Right Content — Image Carousel -->
-    <div class="hero-right">
-        <div class="image-frame">
-            <div class="glow-ring"></div>
-            <div class="carousel">
-                <div class="carousel-slide active">
-                    <img src="assets/myimage1.jpeg" alt="Profile 1"/>
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/myimage2.jpeg" alt="Profile 2"/>
-                </div>
-                <div class="carousel-slide">
-                    <img src="assets/myimage3.jpeg" alt="Profile 3"/>
-                </div>
+    <!-- Right Content - Carousel -->
+    <div class="carousel-wrap">
+        <div class="carousel">
+            <div class="carousel-slide">
+                <img src="assets/myimage1.jpeg" alt="1">
             </div>
-            <div class="carousel-dots">
-                <span class="dot active" data-index="0"></span>
-                <span class="dot" data-index="1"></span>
-                <span class="dot" data-index="2"></span>
+            <div class="carousel-slide">
+                <img src="assets/myimage2.jpeg" alt="2">
+            </div>
+            <div class="carousel-slide">
+                <img src="assets/myimage3.jpeg" alt="3">
             </div>
         </div>
     </div>
@@ -121,10 +140,7 @@
     </div>
 </div>
 
-
-
-<script src="script.js"></script>
-
+<!-- About Section -->
 <section class="about" id="about">
     <div class="container">
         <div class="about-wrapper">
@@ -142,7 +158,7 @@
                 <h2 class="section-title">About <span>Me</span></h2>
                 <h3 class="sub-heading">I'm a Passionate Full-Stack Learner & UI Designer</h3>
                 <p class="about-text">
-                    I am Thushan, a student at <b>MT campus</b> with a deep interest in building modern digital experiences.
+                    I am Thushan, a student at <b>IJSE campus</b> with a deep interest in building modern digital experiences.
                     Currently, I'm focusing on mastering Java, Maven, and MySQL, while crafting beautiful interfaces using Figma and CSS.
                     I love turning complex problems into simple, beautiful, and intuitive designs.
                 </p>
@@ -169,6 +185,121 @@
         </div>
     </div>
 </section>
+
+<script>
+    // ==================== TYPING EFFECT ====================
+    const words = ["Web Developer", "UI Designer", "Freelancer"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typedElement = document.getElementById('typed');
+
+    function type() {
+        const currentWord = words[wordIndex];
+
+        if (isDeleting) {
+            typedElement.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typedElement.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        let typeSpeed = isDeleting ? 45 : 85;
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            typeSpeed = 1600;
+            isDeleting = true;
+        }
+        else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typeSpeed = 500;
+        }
+
+        setTimeout(type, typeSpeed);
+    }
+
+    // ==================== MOUSE CURSOR + TRAIL ====================
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorRing = document.querySelector('.cursor-ring');
+
+    let mouseX = 0, mouseY = 0;
+    let dotX = 0, dotY = 0;
+    let ringX = 0, ringY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        // Create trail particle
+        createTrail(e.clientX, e.clientY);
+    });
+
+    function createTrail(x, y) {
+        const trail = document.createElement('div');
+        trail.classList.add('mouse-trail');
+
+        // Random slight offset for natural feel
+        const offsetX = (Math.random() - 0.5) * 12;
+        const offsetY = (Math.random() - 0.5) * 12;
+
+        trail.style.left = `${x + offsetX}px`;
+        trail.style.top = `${y + offsetY}px`;
+
+        // Alternate between pink and blue tones
+        if (Math.random() > 0.5) {
+            trail.style.background = 'var(--pink)';
+            trail.style.boxShadow = '0 0 12px var(--pink), 0 0 25px var(--pink)';
+        } else {
+            trail.style.background = 'var(--blue)';
+            trail.style.boxShadow = '0 0 12px var(--blue), 0 0 25px var(--blue)';
+        }
+
+        // document.body.appendChild(trail);
+
+        // Remove after animation
+        setTimeout(() => {
+            trail.remove();
+        }, 900);
+    }
+
+    // Smooth following animation for dot and ring
+    function animateCursor() {
+        // Dot follows instantly (sharp)
+        dotX = mouseX;
+        dotY = mouseY;
+        cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
+
+        // Ring follows with slight delay (smooth lag)
+        ringX += (mouseX - ringX) * 0.12;
+        ringY += (mouseY - ringY) * 0.12;
+        cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
+
+        requestAnimationFrame(animateCursor);
+    }
+
+    // Start cursor animation
+    animateCursor();
+
+    // Hide default cursor on interactive elements if needed
+    document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursorRing.style.width = '50px';
+            cursorRing.style.height = '50px';
+            cursorRing.style.borderColor = 'rgba(156, 39, 176, 0.6)';
+        });
+
+        el.addEventListener('mouseleave', () => {
+            cursorRing.style.width = '36px';
+            cursorRing.style.height = '36px';
+            cursorRing.style.borderColor = 'rgba(233,30,140,0.55)';
+        });
+    });
+
+    // Start typing
+    type();
+</script>
 
 </body>
 </html>
