@@ -7,25 +7,17 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
     <style>
         .mouse-trail {
             position: fixed;
-            width: 8px;
-            height: 8px;
+            width: 8px; height: 8px;
             border-radius: 50%;
             pointer-events: none;
             z-index: 9997;
             mix-blend-mode: screen;
             animation: trailFade 800ms ease-out forwards;
-            box-shadow: 0 0 12px var(--pink), 0 0 24px var(--blue);
         }
-        @keyframes trailFade {
-            to {
-                opacity: 0;
-                transform: scale(0.2) translate(var(--tx), var(--ty));
-            }
-        }
+        @keyframes trailFade { to { opacity: 0; transform: scale(0.2); } }
         body { cursor: none; }
     </style>
 </head>
@@ -54,7 +46,6 @@
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
 
-    <!-- Left Content -->
     <div class="hero-left">
         <p class="hero-greeting">Hey, I'm Thushan,</p>
         <h1 class="hero-title">
@@ -67,18 +58,10 @@
         <div class="social-section">
             <p class="find-me">Find Me On</p>
             <div class="social-icons">
-                <a href="#" class="social-btn instagram" aria-label="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="social-btn facebook" aria-label="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-btn pinterest" aria-label="Pinterest">
-                    <i class="fab fa-pinterest-p"></i>
-                </a>
-                <a href="#" class="social-btn linkedin" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
+                <a href="#" class="social-btn instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-btn facebook"  aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn pinterest" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" class="social-btn linkedin"  aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
 
@@ -92,18 +75,12 @@
         </div>
     </div>
 
-    <!-- Right Content - Carousel -->
+    <!-- Carousel -->
     <div class="carousel-wrap">
         <div class="carousel">
-            <div class="carousel-slide">
-                <img src="assets/myimage1.jpeg" alt="1">
-            </div>
-            <div class="carousel-slide">
-                <img src="assets/myimage2.jpeg" alt="2">
-            </div>
-            <div class="carousel-slide">
-                <img src="assets/myimage3.jpeg" alt="3">
-            </div>
+            <div class="carousel-slide"><img src="assets/myimage1.jpeg" alt="photo 1"></div>
+            <div class="carousel-slide"><img src="assets/myimage2.jpeg" alt="photo 2"></div>
+            <div class="carousel-slide"><img src="assets/myimage3.jpeg" alt="photo 3"></div>
         </div>
     </div>
 
@@ -141,171 +118,225 @@
                     <img src="assets/myimage1.jpeg" alt="About Me">
                 </div>
             </div>
-
             <div class="about-content">
                 <h2 class="section-title">About <span>Me</span></h2>
                 <h3 class="sub-heading">I'm a Passionate Full-Stack Learner & UI Designer</h3>
                 <p class="about-text">
-                    I am Thushan, a student at <b>IJSE campus</b> with a deep interest in building modern digital experiences.
-                    Currently, I'm focusing on mastering Java, Maven, and MySQL, while crafting beautiful interfaces using Figma and CSS.
-                    I love turning complex problems into simple, beautiful, and intuitive designs.
+                    I am Thushan, a student at <b>IJSE campus</b> with a deep interest in building modern digital
+                    experiences. Currently, I'm focusing on mastering Java, Maven, and MySQL, while crafting beautiful
+                    interfaces using Figma and CSS. I love turning complex problems into simple, beautiful, and
+                    intuitive designs.
                 </p>
-
                 <div class="personal-info">
                     <div class="info-item">
                         <i class="fas fa-user-graduate"></i>
-                        <div>
-                            <span>Education</span>
-                            <p>Software Engineering Student</p>
-                        </div>
+                        <div><span>Education</span><p>Software Engineering Student</p></div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <span>Location</span>
-                            <p>Sri Lanka</p>
-                        </div>
+                        <div><span>Location</span><p>Sri Lanka</p></div>
                     </div>
                 </div>
-
                 <a href="#contact" class="btn btn-cv">Let's Talk!</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Skills Globe Section -->
-<section class="skills-globe" id="skills">
+<!-- ============================= SKILLS SECTION ============================= -->
+<section class="skills-section" id="skills">
     <div class="container">
+
         <div class="section-header">
+            <p class="section-eyebrow">What I Work With</p>
             <h2 class="section-title">My <span>Skills</span></h2>
-            <p class="section-subtitle">Drag to rotate · Click icons for details</p>
+            <p class="section-subtitle">Technologies and tools I use to bring ideas to life</p>
         </div>
 
-        <div class="globe-wrapper">
-            <canvas id="connectionCanvas" class="connections"></canvas>
-            <div class="globe" id="globe">
-                <!-- Icons injected by JS -->
+        <div class="skills-grid">
+
+            <div class="skill-card" style="--accent:#e34f26;">
+                <div class="skill-card-inner">
+                    <div class="skill-icon-wrap"><i class="fab fa-html5"></i></div>
+                    <h3 class="skill-name">HTML5</h3>
+                    <p class="skill-desc">Semantic markup &amp; modern web structure</p>
+                    <div class="skill-level">
+                        <div class="skill-bar"><div class="skill-fill" style="--pct:90%"></div></div>
+                        <span class="skill-pct">90%</span>
+                    </div>
+                </div>
             </div>
+
+            <div class="skill-card" style="--accent:#1572b6;">
+                <div class="skill-card-inner">
+                    <div class="skill-icon-wrap"><i class="fab fa-css3-alt"></i></div>
+                    <h3 class="skill-name">CSS3</h3>
+                    <p class="skill-desc">Animations, layouts &amp; responsive design</p>
+                    <div class="skill-level">
+                        <div class="skill-bar"><div class="skill-fill" style="--pct:88%"></div></div>
+                        <span class="skill-pct">88%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" style="--accent:#f7df1e;">
+                <div class="skill-card-inner">
+                    <div class="skill-icon-wrap"><i class="fab fa-js"></i></div>
+                    <h3 class="skill-name">JavaScript</h3>
+                    <p class="skill-desc">Interactive experiences &amp; DOM logic</p>
+                    <div class="skill-level">
+                        <div class="skill-bar"><div class="skill-fill" style="--pct:78%"></div></div>
+                        <span class="skill-pct">78%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" style="--accent:#61dafb;">
+                <div class="skill-card-inner">
+                    <div class="skill-icon-wrap"><i class="fab fa-react"></i></div>
+                    <h3 class="skill-name">React</h3>
+                    <p class="skill-desc">Building dynamic user interfaces</p>
+                    <div class="skill-level">
+                        <div class="skill-bar"><div class="skill-fill" style="--pct:65%"></div></div>
+                        <span class="skill-pct">65%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" style="--accent:#007396;">
+                <div class="skill-card-inner">
+                    <div class="skill-icon-wrap"><i class="fas fa-code"></i></div>
+                    <h3 class="skill-name">Java</h3>
+                    <p class="skill-desc">Backend development &amp; OOP principles</p>
+                    <div class="skill-level">
+                        <div class="skill-bar"><div class="skill-fill" style="--pct:72%"></div></div>
+                        <span class="skill-pct">72%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" style="--accent:#4479a1;">
+                <div class="skill-card-inner">
+                    <div class="skill-icon-wrap"><i class="fas fa-database"></i></div>
+                    <h3 class="skill-name">MySQL</h3>
+                    <p class="skill-desc">Relational database design &amp; queries</p>
+                    <div class="skill-level">
+                        <div class="skill-bar"><div class="skill-fill" style="--pct:70%"></div></div>
+                        <span class="skill-pct">70%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" style="--accent:#f24e1e;">
+                <div class="skill-card-inner">
+                    <div class="skill-icon-wrap"><i class="fab fa-figma"></i></div>
+                    <h3 class="skill-name">Figma</h3>
+                    <p class="skill-desc">UI/UX design &amp; prototyping</p>
+                    <div class="skill-level">
+                        <div class="skill-bar"><div class="skill-fill" style="--pct:82%"></div></div>
+                        <span class="skill-pct">82%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" style="--accent:#06b6d4;">
+                <div class="skill-card-inner">
+                    <div class="skill-icon-wrap"><i class="fas fa-wind"></i></div>
+                    <h3 class="skill-name">Tailwind</h3>
+                    <p class="skill-desc">Utility-first CSS framework</p>
+                    <div class="skill-level">
+                        <div class="skill-bar"><div class="skill-fill" style="--pct:75%"></div></div>
+                        <span class="skill-pct">75%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card" style="--accent:#f05032;">
+                <div class="skill-card-inner">
+                    <div class="skill-icon-wrap"><i class="fab fa-git-alt"></i></div>
+                    <h3 class="skill-name">Git</h3>
+                    <p class="skill-desc">Version control &amp; collaboration</p>
+                    <div class="skill-level">
+                        <div class="skill-bar"><div class="skill-fill" style="--pct:80%"></div></div>
+                        <span class="skill-pct">80%</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
-
-<!-- Popup -->
-<div class="popup-overlay" id="popupOverlay">
-    <div class="popup-card" id="popupCard">
-        <button class="close-btn" id="closeBtn">&times;</button>
-        <div class="popup-icon" id="popupIcon"></div>
-        <h3 class="popup-name" id="popupName"></h3>
-        <p class="popup-desc" id="popupDesc"></p>
-    </div>
-</div>
+<!-- ============================= END SKILLS ============================= -->
 
 <script>
     // ==================== TYPING EFFECT ====================
-    const words = ["Web Developer", "UI Designer", "Freelancer"];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    const typedElement = document.getElementById('typed');
+    const words       = ["Web Developer", "UI Designer", "Freelancer"];
+    let wordIndex = 0, charIndex = 0, isDeleting = false;
+    const typedEl     = document.getElementById('typed');
 
     function type() {
-        const currentWord = words[wordIndex];
-        if (isDeleting) {
-            typedElement.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typedElement.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-        }
-        let typeSpeed = isDeleting ? 45 : 85;
-        if (!isDeleting && charIndex === currentWord.length) {
-            typeSpeed = 1600;
-            isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            typeSpeed = 500;
-        }
-        setTimeout(type, typeSpeed);
+        const word = words[wordIndex];
+        typedEl.textContent = isDeleting
+            ? word.substring(0, charIndex - 1)
+            : word.substring(0, charIndex + 1);
+        isDeleting ? charIndex-- : charIndex++;
+        let speed = isDeleting ? 45 : 85;
+        if (!isDeleting && charIndex === word.length)   { speed = 1600; isDeleting = true; }
+        else if (isDeleting && charIndex === 0)          { isDeleting = false; wordIndex = (wordIndex + 1) % words.length; speed = 500; }
+        setTimeout(type, speed);
     }
+    type();
 
-    // ==================== MOUSE CURSOR + TRAIL ====================
-    const cursorDot  = document.querySelector('.cursor-dot');
-    const cursorRing = document.querySelector('.cursor-ring');
-    let mouseX = 0, mouseY = 0;
-    let dotX = 0, dotY = 0;
-    let ringX = 0, ringY = 0;
+    // ==================== CUSTOM CURSOR ====================
+    const dot  = document.querySelector('.cursor-dot');
+    const ring = document.querySelector('.cursor-ring');
+    let mx = 0, my = 0, rx = 0, ry = 0;
 
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        createTrail(e.clientX, e.clientY);
+    document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        dot.style.transform = `translate(${mx}px,${my}px)`;
+        const t = document.createElement('div');
+        t.className = 'mouse-trail';
+        Object.assign(t.style, {
+            left: mx + 'px', top: my + 'px',
+            background:  Math.random() > .5 ? 'var(--pink)' : 'var(--blue)',
+            boxShadow:   Math.random() > .5 ? '0 0 10px var(--pink)' : '0 0 10px var(--blue)'
+        });
+        document.body.appendChild(t);
+        setTimeout(() => t.remove(), 800);
     });
 
-    function createTrail(x, y) {
-        const trail = document.createElement('div');
-        trail.classList.add('mouse-trail');
-        const offsetX = (Math.random() - 0.5) * 12;
-        const offsetY = (Math.random() - 0.5) * 12;
-        trail.style.left = `${x + offsetX}px`;
-        trail.style.top  = `${y + offsetY}px`;
-        if (Math.random() > 0.5) {
-            trail.style.background  = 'var(--pink)';
-            trail.style.boxShadow   = '0 0 12px var(--pink), 0 0 25px var(--pink)';
-        } else {
-            trail.style.background  = 'var(--blue)';
-            trail.style.boxShadow   = '0 0 12px var(--blue), 0 0 25px var(--blue)';
-        }
-        document.body.appendChild(trail);
-        setTimeout(() => trail.remove(), 900);
-    }
+    (function loop() {
+        rx += (mx - rx) * .12; ry += (my - ry) * .12;
+        ring.style.transform = `translate(${rx}px,${ry}px)`;
+        requestAnimationFrame(loop);
+    })();
 
-    function animateCursor() {
-        dotX = mouseX;
-        dotY = mouseY;
-        cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
-        ringX += (mouseX - ringX) * 0.12;
-        ringY += (mouseY - ringY) * 0.12;
-        cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
-        requestAnimationFrame(animateCursor);
-    }
-    animateCursor();
-
-    document.querySelectorAll('a, button').forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursorRing.style.width       = '50px';
-            cursorRing.style.height      = '50px';
-            cursorRing.style.borderColor = 'rgba(156, 39, 176, 0.6)';
-        });
-        el.addEventListener('mouseleave', () => {
-            cursorRing.style.width       = '36px';
-            cursorRing.style.height      = '36px';
-            cursorRing.style.borderColor = 'rgba(233,30,140,0.55)';
-        });
+    document.querySelectorAll('a,button').forEach(el => {
+        el.addEventListener('mouseenter', () => { ring.style.width = ring.style.height = '50px'; ring.style.borderColor = 'rgba(156,39,176,.6)'; });
+        el.addEventListener('mouseleave', () => { ring.style.width = ring.style.height = '36px'; ring.style.borderColor = 'rgba(233,30,140,.55)'; });
     });
 
     // ==================== PARTICLES ====================
-    const particlesContainer = document.getElementById('particles');
-    if (particlesContainer) {
-        for (let i = 0; i < 30; i++) {
-            const p = document.createElement('div');
-            p.classList.add('particle');
-            const size = Math.random() * 4 + 1;
-            p.style.cssText = `
-                width:${size}px; height:${size}px;
-                left:${Math.random()*100}%;
-                top:${Math.random()*100}%;
-                background:${Math.random()>0.5?'var(--pink)':'var(--blue)'};
-                animation-duration:${Math.random()*15+8}s;
-                animation-delay:${Math.random()*10}s;
-            `;
-            particlesContainer.appendChild(p);
-        }
+    const pc = document.getElementById('particles');
+    if (pc) for (let i = 0; i < 30; i++) {
+        const p = document.createElement('div');
+        p.classList.add('particle');
+        const s = Math.random() * 4 + 1;
+        p.style.cssText = `width:${s}px;height:${s}px;left:${Math.random()*100}%;top:${Math.random()*100}%;background:${Math.random()>.5?'var(--pink)':'var(--blue)'};animation-duration:${Math.random()*15+8}s;animation-delay:${Math.random()*10}s;`;
+        pc.appendChild(p);
     }
 
-    // Start typing
-    type();
+    // ==================== SKILL CARDS — SCROLL REVEAL ====================
+    const io = new IntersectionObserver(entries => {
+        entries.forEach((entry, idx) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('visible'), idx * 80);
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.skill-card').forEach(c => io.observe(c));
 </script>
 
 <script src="script.js"></script>
