@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <style>
-        /* Mouse Trail Styles */
         .mouse-trail {
             position: fixed;
             width: 8px;
@@ -19,21 +18,15 @@
             z-index: 9997;
             mix-blend-mode: screen;
             animation: trailFade 800ms ease-out forwards;
-            box-shadow: 0 0 12px var(--pink),
-            0 0 24px var(--blue);
+            box-shadow: 0 0 12px var(--pink), 0 0 24px var(--blue);
         }
-
         @keyframes trailFade {
             to {
                 opacity: 0;
                 transform: scale(0.2) translate(var(--tx), var(--ty));
             }
         }
-
-        /* Hide default cursor on body */
-        body {
-            cursor: none;
-        }
+        body { cursor: none; }
     </style>
 </head>
 <body>
@@ -50,28 +43,23 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#assignment">Assignment</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#service">Service</a></li>
+        <li><a href="#Gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
 <!-- Hero Section -->
 <section class="hero" id="home">
-    <!-- Background particles -->
     <div class="particles" id="particles"></div>
-
-    <!-- Glow blobs -->
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
 
     <!-- Left Content -->
     <div class="hero-left">
         <p class="hero-greeting">Hey, I'm Thushan,</p>
-
         <h1 class="hero-title">
             <span id="typed"></span><span class="cursor-blink">|</span>
         </h1>
-
         <p class="hero-desc">
             I design and build clean, responsive websites<br/>using modern web technologies.
         </p>
@@ -186,127 +174,12 @@
     </div>
 </section>
 
-<script>
-    // ==================== TYPING EFFECT ====================
-    const words = ["Web Developer", "UI Designer", "Freelancer"];
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    const typedElement = document.getElementById('typed');
-
-    function type() {
-        const currentWord = words[wordIndex];
-
-        if (isDeleting) {
-            typedElement.textContent = currentWord.substring(0, charIndex - 1);
-            charIndex--;
-        } else {
-            typedElement.textContent = currentWord.substring(0, charIndex + 1);
-            charIndex++;
-        }
-
-        let typeSpeed = isDeleting ? 45 : 85;
-
-        if (!isDeleting && charIndex === currentWord.length) {
-            typeSpeed = 1600;
-            isDeleting = true;
-        }
-        else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            typeSpeed = 500;
-        }
-
-        setTimeout(type, typeSpeed);
-    }
-
-    // ==================== MOUSE CURSOR + TRAIL ====================
-    const cursorDot = document.querySelector('.cursor-dot');
-    const cursorRing = document.querySelector('.cursor-ring');
-
-    let mouseX = 0, mouseY = 0;
-    let dotX = 0, dotY = 0;
-    let ringX = 0, ringY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-
-        // Create trail particle
-        createTrail(e.clientX, e.clientY);
-    });
-
-    function createTrail(x, y) {
-        const trail = document.createElement('div');
-        trail.classList.add('mouse-trail');
-
-        // Random slight offset for natural feel
-        const offsetX = (Math.random() - 0.5) * 12;
-        const offsetY = (Math.random() - 0.5) * 12;
-
-        trail.style.left = `${x + offsetX}px`;
-        trail.style.top = `${y + offsetY}px`;
-
-        // Alternate between pink and blue tones
-        if (Math.random() > 0.5) {
-            trail.style.background = 'var(--pink)';
-            trail.style.boxShadow = '0 0 12px var(--pink), 0 0 25px var(--pink)';
-        } else {
-            trail.style.background = 'var(--blue)';
-            trail.style.boxShadow = '0 0 12px var(--blue), 0 0 25px var(--blue)';
-        }
-
-        // document.body.appendChild(trail);
-
-        // Remove after animation
-        setTimeout(() => {
-            trail.remove();
-        }, 900);
-    }
-
-    // Smooth following animation for dot and ring
-    function animateCursor() {
-        // Dot follows instantly (sharp)
-        dotX = mouseX;
-        dotY = mouseY;
-        cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
-
-        // Ring follows with slight delay (smooth lag)
-        ringX += (mouseX - ringX) * 0.12;
-        ringY += (mouseY - ringY) * 0.12;
-        cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
-
-        requestAnimationFrame(animateCursor);
-    }
-
-    // Start cursor animation
-    animateCursor();
-
-    // Hide default cursor on interactive elements if needed
-    document.querySelectorAll('a, button').forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursorRing.style.width = '50px';
-            cursorRing.style.height = '50px';
-            cursorRing.style.borderColor = 'rgba(156, 39, 176, 0.6)';
-        });
-
-        el.addEventListener('mouseleave', () => {
-            cursorRing.style.width = '36px';
-            cursorRing.style.height = '36px';
-            cursorRing.style.borderColor = 'rgba(233,30,140,0.55)';
-        });
-    });
-
-    // Start typing
-    type();
-</script>
-
 <!-- Skills Globe Section -->
 <section class="skills-globe" id="skills">
     <div class="container">
         <div class="section-header">
             <h2 class="section-title">My <span>Skills</span></h2>
-            <p class="section-subtitle">Drag to rotate • Click icons for details</p>
+            <p class="section-subtitle">Drag to rotate · Click icons for details</p>
         </div>
 
         <div class="globe-wrapper">
@@ -328,7 +201,113 @@
     </div>
 </div>
 
+<script>
+    // ==================== TYPING EFFECT ====================
+    const words = ["Web Developer", "UI Designer", "Freelancer"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typedElement = document.getElementById('typed');
+
+    function type() {
+        const currentWord = words[wordIndex];
+        if (isDeleting) {
+            typedElement.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typedElement.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+        }
+        let typeSpeed = isDeleting ? 45 : 85;
+        if (!isDeleting && charIndex === currentWord.length) {
+            typeSpeed = 1600;
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typeSpeed = 500;
+        }
+        setTimeout(type, typeSpeed);
+    }
+
+    // ==================== MOUSE CURSOR + TRAIL ====================
+    const cursorDot  = document.querySelector('.cursor-dot');
+    const cursorRing = document.querySelector('.cursor-ring');
+    let mouseX = 0, mouseY = 0;
+    let dotX = 0, dotY = 0;
+    let ringX = 0, ringY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        createTrail(e.clientX, e.clientY);
+    });
+
+    function createTrail(x, y) {
+        const trail = document.createElement('div');
+        trail.classList.add('mouse-trail');
+        const offsetX = (Math.random() - 0.5) * 12;
+        const offsetY = (Math.random() - 0.5) * 12;
+        trail.style.left = `${x + offsetX}px`;
+        trail.style.top  = `${y + offsetY}px`;
+        if (Math.random() > 0.5) {
+            trail.style.background  = 'var(--pink)';
+            trail.style.boxShadow   = '0 0 12px var(--pink), 0 0 25px var(--pink)';
+        } else {
+            trail.style.background  = 'var(--blue)';
+            trail.style.boxShadow   = '0 0 12px var(--blue), 0 0 25px var(--blue)';
+        }
+        document.body.appendChild(trail);
+        setTimeout(() => trail.remove(), 900);
+    }
+
+    function animateCursor() {
+        dotX = mouseX;
+        dotY = mouseY;
+        cursorDot.style.transform = `translate(${dotX}px, ${dotY}px)`;
+        ringX += (mouseX - ringX) * 0.12;
+        ringY += (mouseY - ringY) * 0.12;
+        cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursorRing.style.width       = '50px';
+            cursorRing.style.height      = '50px';
+            cursorRing.style.borderColor = 'rgba(156, 39, 176, 0.6)';
+        });
+        el.addEventListener('mouseleave', () => {
+            cursorRing.style.width       = '36px';
+            cursorRing.style.height      = '36px';
+            cursorRing.style.borderColor = 'rgba(233,30,140,0.55)';
+        });
+    });
+
+    // ==================== PARTICLES ====================
+    const particlesContainer = document.getElementById('particles');
+    if (particlesContainer) {
+        for (let i = 0; i < 30; i++) {
+            const p = document.createElement('div');
+            p.classList.add('particle');
+            const size = Math.random() * 4 + 1;
+            p.style.cssText = `
+                width:${size}px; height:${size}px;
+                left:${Math.random()*100}%;
+                top:${Math.random()*100}%;
+                background:${Math.random()>0.5?'var(--pink)':'var(--blue)'};
+                animation-duration:${Math.random()*15+8}s;
+                animation-delay:${Math.random()*10}s;
+            `;
+            particlesContainer.appendChild(p);
+        }
+    }
+
+    // Start typing
+    type();
+</script>
+
 <script src="script.js"></script>
 </body>
 </html>
-
