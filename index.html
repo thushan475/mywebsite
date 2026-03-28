@@ -339,511 +339,251 @@
     document.querySelectorAll('.skill-card').forEach(c => io.observe(c));
 </script>
 
-<script src="script.js"></script>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Gallery | Thushan Portfolio</title>
-    <link rel="stylesheet" href="gallery.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-</head>
-<body>
+
 
 <!-- ==================== GALLERY SECTION ==================== -->
 <section class="gallery-section" id="Gallery">
 
-    <!-- Network Canvas Background -->
-    <canvas class="network-canvas" id="networkCanvas"></canvas>
+    <!-- CSS-only particle/network background nodes -->
+    <div class="bg-net" aria-hidden="true">
+        <span class="node n1"></span><span class="node n2"></span>
+        <span class="node n3"></span><span class="node n4"></span>
+        <span class="node n5"></span><span class="node n6"></span>
+        <span class="node n7"></span><span class="node n8"></span>
+        <span class="node n9"></span><span class="node n10"></span>
+        <span class="node n11"></span><span class="node n12"></span>
+        <span class="line l1"></span><span class="line l2"></span>
+        <span class="line l3"></span><span class="line l4"></span>
+        <span class="line l5"></span><span class="line l6"></span>
+        <span class="line l7"></span><span class="line l8"></span>
+    </div>
 
-    <!-- Background Blobs -->
-    <div class="g-blob g-blob-1"></div>
-    <div class="g-blob g-blob-2"></div>
-    <div class="g-blob g-blob-3"></div>
+    <!-- Blobs -->
+    <div class="g-blob g-blob-1" aria-hidden="true"></div>
+    <div class="g-blob g-blob-2" aria-hidden="true"></div>
+    <div class="g-blob g-blob-3" aria-hidden="true"></div>
 
-    <!-- Section Header -->
     <div class="container">
-        <div class="section-header" data-reveal>
+
+        <!-- Section Header -->
+        <div class="section-header">
             <p class="section-eyebrow">Visual Stories</p>
             <h2 class="section-title">My <span>Gallery</span></h2>
             <p class="section-subtitle">A glimpse into my world through the lens</p>
         </div>
 
-        <!-- Filter Tabs -->
-        <div class="gallery-filters" data-reveal>
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="design">Design</button>
-            <button class="filter-btn" data-filter="code">Code</button>
-            <button class="filter-btn" data-filter="life">Life</button>
-        </div>
+        <!-- ===== GALLERY GRID ===== -->
+        <div class="gallery-grid">
 
-        <!-- Gallery Grid -->
-        <div class="gallery-grid" id="galleryGrid">
+            <!-- Card 1 · tall ─ links to lightbox #lb-1 -->
+            <a href="#lb-1" class="g-card g-card--tall">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage1.jpeg" alt="Portrait I" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <p class="g-caption"><span class="g-num">01</span> Portrait I</p>
+            </a>
 
-            <!-- Card 1 -->
-            <div class="gallery-card" data-category="design" data-index="0" data-reveal>
-                <div class="card-glow"></div>
-                <div class="card-img-wrap">
-                    <img src="assets/myimage1.jpeg" alt="Gallery 1" loading="lazy"/>
-                    <div class="card-overlay">
-                        <div class="overlay-inner">
-                            <i class="fas fa-expand-alt"></i>
-                            <span>View</span>
-                        </div>
-                    </div>
+            <!-- Card 2 · normal -->
+            <a href="#lb-2" class="g-card">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage2.jpeg" alt="Portrait II" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
                 </div>
-                <div class="card-info">
-                    <h4>Portrait I</h4>
-                    <span class="card-tag">Design</span>
-                </div>
-                <div class="card-shine"></div>
-            </div>
+                <p class="g-caption"><span class="g-num">02</span> Portrait II</p>
+            </a>
 
-            <!-- Card 2 -->
-            <div class="gallery-card" data-category="code" data-index="1" data-reveal>
-                <div class="card-glow"></div>
-                <div class="card-img-wrap">
-                    <img src="assets/myimage2.jpeg" alt="Gallery 2" loading="lazy"/>
-                    <div class="card-overlay">
-                        <div class="overlay-inner">
-                            <i class="fas fa-expand-alt"></i>
-                            <span>View</span>
-                        </div>
-                    </div>
+            <!-- Card 3 · normal -->
+            <a href="#lb-3" class="g-card">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage3.jpeg" alt="Portrait III" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
                 </div>
-                <div class="card-info">
-                    <h4>Portrait II</h4>
-                    <span class="card-tag">Code</span>
-                </div>
-                <div class="card-shine"></div>
-            </div>
+                <p class="g-caption"><span class="g-num">03</span> Portrait III</p>
+            </a>
 
-            <!-- Card 3 -->
-            <div class="gallery-card" data-category="life" data-index="2" data-reveal>
-                <div class="card-glow"></div>
-                <div class="card-img-wrap">
-                    <img src="assets/myimage3.jpeg" alt="Gallery 3" loading="lazy"/>
-                    <div class="card-overlay">
-                        <div class="overlay-inner">
-                            <i class="fas fa-expand-alt"></i>
-                            <span>View</span>
-                        </div>
-                    </div>
+            <!-- Card 4 · wide -->
+            <a href="#lb-4" class="g-card g-card--wide">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage1.jpeg" alt="Featured" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
                 </div>
-                <div class="card-info">
-                    <h4>Portrait III</h4>
-                    <span class="card-tag">Life</span>
-                </div>
-                <div class="card-shine"></div>
-            </div>
+                <p class="g-caption"><span class="g-num">04</span> Featured</p>
+            </a>
 
-            <!-- Card 4 -->
-            <div class="gallery-card card-wide" data-category="design" data-index="3" data-reveal>
-                <div class="card-glow"></div>
-                <div class="card-img-wrap">
-                    <img src="assets/myimage1.jpeg" alt="Gallery 4" loading="lazy"/>
-                    <div class="card-overlay">
-                        <div class="overlay-inner">
-                            <i class="fas fa-expand-alt"></i>
-                            <span>View</span>
-                        </div>
-                    </div>
+            <!-- Card 5 · normal -->
+            <a href="#lb-5" class="g-card">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage2.jpeg" alt="Candid V" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
                 </div>
-                <div class="card-info">
-                    <h4>Featured Shot</h4>
-                    <span class="card-tag">Design</span>
-                </div>
-                <div class="card-shine"></div>
-            </div>
+                <p class="g-caption"><span class="g-num">05</span> Candid V</p>
+            </a>
 
-            <!-- Card 5 -->
-            <div class="gallery-card" data-category="life" data-index="4" data-reveal>
-                <div class="card-glow"></div>
-                <div class="card-img-wrap">
-                    <img src="assets/myimage2.jpeg" alt="Gallery 5" loading="lazy"/>
-                    <div class="card-overlay">
-                        <div class="overlay-inner">
-                            <i class="fas fa-expand-alt"></i>
-                            <span>View</span>
-                        </div>
-                    </div>
+            <!-- Card 6 · tall -->
+            <a href="#lb-6" class="g-card g-card--tall">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage3.jpeg" alt="Depth VI" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
                 </div>
-                <div class="card-info">
-                    <h4>Candid V</h4>
-                    <span class="card-tag">Life</span>
-                </div>
-                <div class="card-shine"></div>
-            </div>
+                <p class="g-caption"><span class="g-num">06</span> Depth VI</p>
+            </a>
 
-            <!-- Card 6 -->
-            <div class="gallery-card" data-category="code" data-index="5" data-reveal>
-                <div class="card-glow"></div>
-                <div class="card-img-wrap">
-                    <img src="assets/myimage3.jpeg" alt="Gallery 6" loading="lazy"/>
-                    <div class="card-overlay">
-                        <div class="overlay-inner">
-                            <i class="fas fa-expand-alt"></i>
-                            <span>View</span>
-                        </div>
-                    </div>
+            <!-- Card 7 · normal -->
+            <a href="#lb-7" class="g-card">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage1.jpeg" alt="Visual VII" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
                 </div>
-                <div class="card-info">
-                    <h4>Code VI</h4>
-                    <span class="card-tag">Code</span>
-                </div>
-                <div class="card-shine"></div>
-            </div>
+                <p class="g-caption"><span class="g-num">07</span> Visual VII</p>
+            </a>
 
-            <!-- Card 7 -->
-            <div class="gallery-card" data-category="design" data-index="6" data-reveal>
-                <div class="card-glow"></div>
-                <div class="card-img-wrap">
-                    <img src="assets/myimage1.jpeg" alt="Gallery 7" loading="lazy"/>
-                    <div class="card-overlay">
-                        <div class="overlay-inner">
-                            <i class="fas fa-expand-alt"></i>
-                            <span>View</span>
-                        </div>
-                    </div>
+            <!-- Card 8 · normal -->
+            <a href="#lb-8" class="g-card">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage2.jpeg" alt="Frame VIII" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
                 </div>
-                <div class="card-info">
-                    <h4>Visual VII</h4>
-                    <span class="card-tag">Design</span>
-                </div>
-                <div class="card-shine"></div>
-            </div>
-
-            <!-- Card 8 -->
-            <div class="gallery-card card-tall" data-category="life" data-index="7" data-reveal>
-                <div class="card-glow"></div>
-                <div class="card-img-wrap">
-                    <img src="assets/myimage2.jpeg" alt="Gallery 8" loading="lazy"/>
-                    <div class="card-overlay">
-                        <div class="overlay-inner">
-                            <i class="fas fa-expand-alt"></i>
-                            <span>View</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h4>Tall Shot VIII</h4>
-                    <span class="card-tag">Life</span>
-                </div>
-                <div class="card-shine"></div>
-            </div>
+                <p class="g-caption"><span class="g-num">08</span> Frame VIII</p>
+            </a>
 
         </div><!-- /gallery-grid -->
     </div><!-- /container -->
-
 </section>
 
 
-<!-- ==================== LIGHTBOX MODAL ==================== -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
-    <div class="lightbox-backdrop"></div>
-    <div class="lightbox-box">
-        <button class="lb-close" id="lbClose" aria-label="Close"><i class="fas fa-times"></i></button>
-        <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-        <button class="lb-nav lb-next" id="lbNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+<!-- ==================== CSS-ONLY LIGHTBOXES (:target) ==================== -->
+<!-- Close = href="#Gallery" removes the :target, hiding the modal -->
+
+<!-- Lightbox 1 -->
+<div class="lightbox" id="lb-1">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
         <div class="lb-img-wrap">
-            <img src="" alt="" id="lbImage" />
-            <div class="lb-loader"><div class="lb-spinner"></div></div>
+            <img src="assets/myimage1.jpeg" alt="Portrait I"/>
         </div>
         <div class="lb-meta">
-            <span class="lb-title" id="lbTitle"></span>
-            <span class="lb-counter" id="lbCounter"></span>
+            <span class="lb-title">Portrait I</span>
+            <span class="lb-counter">01 / 08</span>
         </div>
     </div>
 </div>
 
+<!-- Lightbox 2 -->
+<div class="lightbox" id="lb-2">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap">
+            <img src="assets/myimage2.jpeg" alt="Portrait II"/>
+        </div>
+        <div class="lb-meta">
+            <span class="lb-title">Portrait II</span>
+            <span class="lb-counter">02 / 08</span>
+        </div>
+    </div>
+</div>
 
-<!-- ==================== JAVASCRIPT ==================== -->
-<script>
-    /* =====================================================
-       1. NETWORK CANVAS — animated nodes + lines
-       ===================================================== */
-    (function () {
-        const canvas = document.getElementById('networkCanvas');
-        const ctx    = canvas.getContext('2d');
+<!-- Lightbox 3 -->
+<div class="lightbox" id="lb-3">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap">
+            <img src="assets/myimage3.jpeg" alt="Portrait III"/>
+        </div>
+        <div class="lb-meta">
+            <span class="lb-title">Portrait III</span>
+            <span class="lb-counter">03 / 08</span>
+        </div>
+    </div>
+</div>
 
-        let W, H, nodes = [], mouse = { x: -9999, y: -9999 };
-        const NODE_COUNT  = 55;
-        const MAX_DIST    = 160;
-        const MOUSE_DIST  = 200;
+<!-- Lightbox 4 -->
+<div class="lightbox" id="lb-4">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap">
+            <img src="assets/myimage1.jpeg" alt="Featured"/>
+        </div>
+        <div class="lb-meta">
+            <span class="lb-title">Featured</span>
+            <span class="lb-counter">04 / 08</span>
+        </div>
+    </div>
+</div>
 
-        function resize() {
-            W = canvas.width  = canvas.offsetWidth;
-            H = canvas.height = canvas.offsetHeight;
-        }
+<!-- Lightbox 5 -->
+<div class="lightbox" id="lb-5">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap">
+            <img src="assets/myimage2.jpeg" alt="Candid V"/>
+        </div>
+        <div class="lb-meta">
+            <span class="lb-title">Candid V</span>
+            <span class="lb-counter">05 / 08</span>
+        </div>
+    </div>
+</div>
 
-        function createNodes() {
-            nodes = [];
-            for (let i = 0; i < NODE_COUNT; i++) {
-                nodes.push({
-                    x:  Math.random() * W,
-                    y:  Math.random() * H,
-                    vx: (Math.random() - 0.5) * 0.55,
-                    vy: (Math.random() - 0.5) * 0.55,
-                    r:  Math.random() * 2.5 + 1,
-                    hue: Math.random() > 0.5 ? '#e91e8c' : '#4fc3f7'
-                });
-            }
-        }
+<!-- Lightbox 6 -->
+<div class="lightbox" id="lb-6">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap">
+            <img src="assets/myimage3.jpeg" alt="Depth VI"/>
+        </div>
+        <div class="lb-meta">
+            <span class="lb-title">Depth VI</span>
+            <span class="lb-counter">06 / 08</span>
+        </div>
+    </div>
+</div>
 
-        function drawNode(n, alpha) {
-            ctx.beginPath();
-            ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-            ctx.fillStyle = n.hue;
-            ctx.globalAlpha = alpha;
-            ctx.shadowColor  = n.hue;
-            ctx.shadowBlur   = 8;
-            ctx.fill();
-            ctx.globalAlpha = 1;
-            ctx.shadowBlur  = 0;
-        }
+<!-- Lightbox 7 -->
+<div class="lightbox" id="lb-7">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap">
+            <img src="assets/myimage1.jpeg" alt="Visual VII"/>
+        </div>
+        <div class="lb-meta">
+            <span class="lb-title">Visual VII</span>
+            <span class="lb-counter">07 / 08</span>
+        </div>
+    </div>
+</div>
 
-        function drawLine(x1, y1, x2, y2, alpha, color) {
-            ctx.beginPath();
-            ctx.moveTo(x1, y1);
-            ctx.lineTo(x2, y2);
-            ctx.strokeStyle = color;
-            ctx.lineWidth   = 0.7;
-            ctx.globalAlpha = alpha;
-            ctx.shadowColor  = color;
-            ctx.shadowBlur   = 4;
-            ctx.stroke();
-            ctx.globalAlpha = 1;
-            ctx.shadowBlur  = 0;
-        }
+<!-- Lightbox 8 -->
+<div class="lightbox" id="lb-8">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap">
+            <img src="assets/myimage2.jpeg" alt="Frame VIII"/>
+        </div>
+        <div class="lb-meta">
+            <span class="lb-title">Frame VIII</span>
+            <span class="lb-counter">08 / 08</span>
+        </div>
+    </div>
+</div>
 
-        function animate() {
-            ctx.clearRect(0, 0, W, H);
-
-            /* update positions */
-            for (const n of nodes) {
-                n.x += n.vx;
-                n.y += n.vy;
-                if (n.x < 0 || n.x > W) n.vx *= -1;
-                if (n.y < 0 || n.y > H) n.vy *= -1;
-
-                /* mouse repulsion — subtle */
-                const dx = n.x - mouse.x, dy = n.y - mouse.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < MOUSE_DIST) {
-                    const force = (MOUSE_DIST - dist) / MOUSE_DIST * 0.3;
-                    n.x += (dx / dist) * force;
-                    n.y += (dy / dist) * force;
-                }
-            }
-
-            /* draw lines between close nodes */
-            for (let i = 0; i < nodes.length; i++) {
-                for (let j = i + 1; j < nodes.length; j++) {
-                    const a = nodes[i], b = nodes[j];
-                    const dx = a.x - b.x, dy = a.y - b.y;
-                    const d  = Math.sqrt(dx * dx + dy * dy);
-                    if (d < MAX_DIST) {
-                        const alpha = (1 - d / MAX_DIST) * 0.45;
-                        drawLine(a.x, a.y, b.x, b.y, alpha,
-                            a.hue === '#e91e8c' ? 'rgba(233,30,140,0.8)' : 'rgba(79,195,247,0.8)');
-                    }
-                }
-            }
-
-            /* lines to mouse cursor */
-            for (const n of nodes) {
-                const dx = n.x - mouse.x, dy = n.y - mouse.y;
-                const d  = Math.sqrt(dx * dx + dy * dy);
-                if (d < MOUSE_DIST) {
-                    const alpha = (1 - d / MOUSE_DIST) * 0.6;
-                    drawLine(n.x, n.y, mouse.x, mouse.y, alpha, 'rgba(233,30,140,0.9)');
-                }
-            }
-
-            /* draw nodes */
-            for (const n of nodes) drawNode(n, 0.85);
-
-            requestAnimationFrame(animate);
-        }
-
-        window.addEventListener('mousemove', e => {
-            const rect = canvas.getBoundingClientRect();
-            mouse.x = e.clientX - rect.left;
-            mouse.y = e.clientY - rect.top;
-        });
-        window.addEventListener('resize', () => { resize(); createNodes(); });
-        resize(); createNodes(); animate();
-    })();
-
-
-    /* =====================================================
-       2. SCROLL REVEAL
-       ===================================================== */
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => entry.target.classList.add('revealed'), i * 80);
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
-
-
-    /* =====================================================
-       3. CARD SHINE (mousemove tilt)
-       ===================================================== */
-    document.querySelectorAll('.gallery-card').forEach(card => {
-        card.addEventListener('mousemove', e => {
-            const r   = card.getBoundingClientRect();
-            const cx  = r.left + r.width  / 2;
-            const cy  = r.top  + r.height / 2;
-            const rx  = ((e.clientY - cy) / (r.height / 2)) * 6;
-            const ry  = ((e.clientX - cx) / (r.width  / 2)) * -6;
-            const px  = ((e.clientX - r.left) / r.width)  * 100;
-            const py  = ((e.clientY - r.top)  / r.height) * 100;
-
-            card.style.transform =
-                `translateY(-10px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-            card.querySelector('.card-shine').style.background =
-                `radial-gradient(circle at ${px}% ${py}%, rgba(255,255,255,0.12) 0%, transparent 65%)`;
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = '';
-            card.querySelector('.card-shine').style.background = '';
-        });
-    });
-
-
-    /* =====================================================
-       4. FILTER TABS
-       ===================================================== */
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards      = document.querySelectorAll('.gallery-card');
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const filter = btn.dataset.filter;
-            cards.forEach(c => {
-                const match = filter === 'all' || c.dataset.category === filter;
-                c.style.opacity = '0';
-                c.style.transform = 'scale(0.85)';
-                setTimeout(() => {
-                    c.style.display = match ? '' : 'none';
-                }, 220);
-                if (match) {
-                    setTimeout(() => {
-                        c.style.display = '';
-                        requestAnimationFrame(() => {
-                            c.style.opacity   = '1';
-                            c.style.transform = 'scale(1)';
-                        });
-                    }, 240);
-                }
-            });
-        });
-    });
-
-
-    /* =====================================================
-       5. LIGHTBOX
-       ===================================================== */
-    const lightbox  = document.getElementById('lightbox');
-    const lbImage   = document.getElementById('lbImage');
-    const lbTitle   = document.getElementById('lbTitle');
-    const lbCounter = document.getElementById('lbCounter');
-    const lbClose   = document.getElementById('lbClose');
-    const lbPrev    = document.getElementById('lbPrev');
-    const lbNext    = document.getElementById('lbNext');
-    const lbLoader  = document.querySelector('.lb-loader');
-
-    let currentIndex = 0;
-    let visibleCards = [];
-
-    function getVisibleCards() {
-        return [...document.querySelectorAll('.gallery-card')]
-            .filter(c => c.style.display !== 'none');
-    }
-
-    function openLightbox(index) {
-        visibleCards = getVisibleCards();
-        currentIndex = index;
-        showImage(currentIndex);
-        lightbox.classList.add('open');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-        lightbox.classList.remove('open');
-        document.body.style.overflow = '';
-        setTimeout(() => { lbImage.src = ''; }, 400);
-    }
-
-    function showImage(idx) {
-        const card  = visibleCards[idx];
-        const img   = card.querySelector('img');
-        const title = card.querySelector('h4').textContent;
-
-        lbLoader.style.display = 'flex';
-        lbImage.style.opacity  = '0';
-
-        const tempImg = new Image();
-        tempImg.src   = img.src;
-        tempImg.onload = () => {
-            lbImage.src   = img.src;
-            lbImage.alt   = title;
-            lbTitle.textContent   = title;
-            lbCounter.textContent = `${idx + 1} / ${visibleCards.length}`;
-            lbLoader.style.display = 'none';
-            lbImage.style.opacity  = '1';
-        };
-
-        lbPrev.style.opacity = idx === 0 ? '0.3' : '1';
-        lbNext.style.opacity = idx === visibleCards.length - 1 ? '0.3' : '1';
-    }
-
-    /* open on card click */
-    document.querySelectorAll('.gallery-card').forEach((card, i) => {
-        card.addEventListener('click', () => {
-            visibleCards = getVisibleCards();
-            const vIdx = visibleCards.indexOf(card);
-            openLightbox(vIdx === -1 ? 0 : vIdx);
-        });
-    });
-
-    lbClose.addEventListener('click', closeLightbox);
-    document.querySelector('.lightbox-backdrop').addEventListener('click', closeLightbox);
-
-    lbPrev.addEventListener('click', () => {
-        if (currentIndex > 0) { currentIndex--; showImage(currentIndex); }
-    });
-    lbNext.addEventListener('click', () => {
-        if (currentIndex < visibleCards.length - 1) { currentIndex++; showImage(currentIndex); }
-    });
-
-    /* keyboard navigation */
-    document.addEventListener('keydown', e => {
-        if (!lightbox.classList.contains('open')) return;
-        if (e.key === 'Escape')     closeLightbox();
-        if (e.key === 'ArrowLeft')  lbPrev.click();
-        if (e.key === 'ArrowRight') lbNext.click();
-    });
-
-    /* touch/swipe */
-    let touchStartX = 0;
-    lightbox.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-    lightbox.addEventListener('touchend', e => {
-        const diff = touchStartX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 50) diff > 0 ? lbNext.click() : lbPrev.click();
-    });
-</script>
-
-</body>
-</html>
+<!-- NO JAVASCRIPT AT ALL -->
 </body>
 </html>
