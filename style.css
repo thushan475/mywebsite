@@ -1998,3 +1998,13 @@ a.ct-info-item:hover .ct-info-arrow {
     }
     .nav-links a { padding: 5px 8px; font-size: 0.66rem; letter-spacing: 0; }
 }
+
+/* ── Navbar — iPhone SE / small phones ── */
+@media (max-width: 390px) {
+    .navbar {
+        top:           8px;
+        padding:       5px 8px;
+        border-radius: 36px;
+    }
+    .nav-links a { padding: 5px 6px; font-size: 0.60rem; }
+}
