@@ -1401,4 +1401,20 @@ body:hover .cursor-ring {
     animation:     ctNodeDrift linear infinite alternate;
 }
 
+.cn1 { width:5px; height:5px; background:var(--pink);   box-shadow:0 0 10px var(--pink);   top:10%; left:5%;  --dx:35px;  --dy:20px;  animation-duration:10s; animation-delay:.3s;  }
+.cn2 { width:3px; height:3px; background:var(--blue);   box-shadow:0 0 8px  var(--blue);   top:70%; left:20%; --dx:-25px; --dy:28px;  animation-duration:13s; animation-delay:1.2s; }
+.cn3 { width:6px; height:6px; background:var(--pink);   box-shadow:0 0 12px var(--pink);   top:30%; left:90%; --dx:-40px; --dy:18px;  animation-duration:9s;  animation-delay:.7s;  }
+.cn4 { width:4px; height:4px; background:var(--blue);   box-shadow:0 0 9px  var(--blue);   top:85%; left:75%; --dx:22px;  --dy:-25px; animation-duration:11s; animation-delay:2s;   }
+.cn5 { width:3px; height:3px; background:var(--purple); box-shadow:0 0 8px  var(--purple); top:50%; left:50%; --dx:30px;  --dy:15px;  animation-duration:15s; animation-delay:4s;   }
+.cn6 { width:5px; height:5px; background:var(--blue);   box-shadow:0 0 10px var(--blue);   top:20%; left:65%; --dx:-32px; --dy:22px;  animation-duration:8s;  animation-delay:1.5s; }
+.cn7 { width:4px; height:4px; background:var(--pink);   box-shadow:0 0 9px  var(--pink);   top:60%; left:8%;  --dx:28px;  --dy:-18px; animation-duration:12s; animation-delay:.5s;  }
+.cn8 { width:3px; height:3px; background:var(--purple); box-shadow:0 0 7px  var(--purple); top:92%; left:45%; --dx:-20px; --dy:12px;  animation-duration:14s; animation-delay:3s;   }
+
+@keyframes ctNodeDrift {
+    0%   { opacity: 0;    transform: translate(0, 0); }
+    10%  { opacity: 0.80; }
+    90%  { opacity: 0.50; }
+    100% { opacity: 0.05; transform: translate(var(--dx), var(--dy)); }
+}
+
 
