@@ -1632,3 +1632,37 @@ body:hover .cursor-ring {
     border-radius:  50px;
 }
 
+.ct-badge i { font-size: 0.45rem; }
+
+/* info items (email, phone, location) */
+.ct-info-list {
+    display:        flex;
+    flex-direction: column;
+    gap:            14px;
+}
+
+.ct-info-item {
+    display:     flex;
+    align-items: center;
+    gap:         16px;
+    padding:     16px 18px;
+    border-radius: 16px;
+    background:  var(--glass-bg);
+    border:      1px solid var(--glass-border);
+    backdrop-filter:         blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor:      default;
+    transition:
+            transform    .35s var(--ease),
+            border-color .35s ease,
+            box-shadow   .35s ease;
+}
+a.ct-info-item { cursor: pointer; }
+
+a.ct-info-item:hover,
+.ct-info-item:hover {
+    transform:    translateX(6px);
+    border-color: rgba(233, 30, 140, 0.40);
+    box-shadow:   0 4px 24px rgba(233, 30, 140, 0.12);
+}
+
