@@ -1395,5 +1395,10 @@ body:hover .cursor-ring {
     z-index:  0;
     overflow: hidden;
 }
+.ct-node {
+    position:      absolute;
+    border-radius: 50%;
+    animation:     ctNodeDrift linear infinite alternate;
+}
 
 
