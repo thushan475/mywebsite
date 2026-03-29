@@ -1459,5 +1459,13 @@ body:hover .cursor-ring {
     from { transform: translate(0, 0) scale(1); }
     to   { transform: translate(28px, 36px) scale(1.06); }
 }
+/* ── container ── */
+.ct-container {
+    max-width: 1200px;
+    margin:    0 auto;
+    padding:   0 6%;
+    position:  relative;
+    z-index:   2;
+}
 
 
