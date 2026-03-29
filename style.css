@@ -1432,5 +1432,13 @@ body:hover .cursor-ring {
     from { opacity: 0.04; }
     to   { opacity: 0.55; }
 }
+.ct-blob {
+    position:   absolute;
+    border-radius: 50%;
+    filter:     blur(110px);
+    pointer-events: none;
+    z-index:    0;
+    animation:  ctBlobDrift ease-in-out infinite alternate;
+}
 
 
