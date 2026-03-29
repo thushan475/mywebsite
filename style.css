@@ -1441,4 +1441,11 @@ body:hover .cursor-ring {
     animation:  ctBlobDrift ease-in-out infinite alternate;
 }
 
+.ct-blob-1 {
+    width:  520px; height: 520px;
+    background: radial-gradient(circle, rgba(233,30,140,.13), rgba(156,39,176,.07));
+    top: -120px; left: -100px;
+    animation-duration: 15s;
+}
+
 
