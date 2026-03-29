@@ -1877,3 +1877,18 @@ a.ct-info-item:hover .ct-info-arrow {
             0 0 0 3px rgba(233, 30, 140, 0.12),
             0 4px 20px rgba(233, 30, 140, 0.08);
 }
+
+
+/* animated bottom underline on focus */
+.ct-field-line {
+    position:      absolute;
+    bottom:        0;
+    left:          0;
+    width:         0;
+    height:        2px;
+    border-radius: 99px;
+    background:    linear-gradient(90deg, var(--pink), var(--purple));
+    pointer-events: none;
+    transition:    width .4s var(--ease);
+}
+.ct-field:focus-within .ct-field-line { width: 100%; }
