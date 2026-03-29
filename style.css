@@ -1710,3 +1710,21 @@ a.ct-info-item:hover,
     transition: opacity .3s ease, transform .3s ease;
 }
 
+a.ct-info-item:hover .ct-info-arrow {
+    opacity:   1;
+    transform: translateX(0);
+}
+
+/* social icon row */
+.ct-socials-label {
+    font-family:    var(--font-main);
+    font-size:      0.72rem;
+    font-weight:    700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color:          var(--pink);
+    margin-bottom:  14px;
+}
+.ct-social-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+
