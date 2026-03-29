@@ -2019,3 +2019,23 @@ a.ct-info-item:hover .ct-info-arrow {
     .ct-layout        { gap: 28px; }
     .ct-form          { padding: 28px 28px 32px; }
 }
+
+/* ── Tablet landscape 900px ── */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column-reverse;
+        align-items:    center;
+        text-align:     center;
+        padding:        130px 6% 90px;
+        gap:            48px;
+    }
+    .hero-left               { max-width: 100%; }
+    .social-icons,
+    .hero-buttons            { justify-content: center; }
+    .diagonal-slice          { display: none; }
+    .carousel {
+        width:  clamp(200px, 55vw, 320px);
+        height: clamp(280px, 75vw, 440px);
+    }
+    .skills-grid             { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+}
