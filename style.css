@@ -1665,4 +1665,23 @@ a.ct-info-item:hover,
     border-color: rgba(233, 30, 140, 0.40);
     box-shadow:   0 4px 24px rgba(233, 30, 140, 0.12);
 }
+.ct-info-icon {
+    display:    flex;
+    align-items:     center;
+    justify-content: center;
+    flex-shrink: 0;
+    width:  46px;
+    height: 46px;
+    border-radius: 14px;
+    font-size:  1.05rem;
+    color:      var(--ic, var(--pink));
+    background: color-mix(in srgb, var(--ic, var(--pink)) 12%, transparent);
+    border:     1px solid color-mix(in srgb, var(--ic, var(--pink)) 28%, transparent);
+    transition: transform .3s var(--ease), box-shadow .3s ease;
+}
+.ct-info-item:hover .ct-info-icon {
+    transform:  scale(1.12) rotate(-5deg);
+    box-shadow: 0 0 18px color-mix(in srgb, var(--ic, var(--pink)) 45%, transparent);
+}
+
 
