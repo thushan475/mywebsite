@@ -1728,3 +1728,21 @@ a.ct-info-item:hover .ct-info-arrow {
 .ct-social-row { display: flex; gap: 12px; flex-wrap: wrap; }
 
 
+.ct-soc-btn {
+    display:    flex;
+    align-items:     center;
+    justify-content: center;
+    position:   relative;
+    overflow:   hidden;
+    width:  48px;
+    height: 48px;
+    border-radius: 14px;
+    font-size:  1.1rem;
+    background: var(--glass-bg);
+    border:     1px solid var(--glass-border);
+    transition:
+            transform    .35s var(--ease),
+            box-shadow   .35s ease,
+            background   .3s ease,
+            border-color .3s ease;
+}
