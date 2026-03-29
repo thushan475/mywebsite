@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact | Thushan Pahasara</title>
+    <link rel="stylesheet" href="contact.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<!-- ======================== CONTACT SECTION ======================== -->
+<section class="contact-section" id="contact">
+
+    <!-- CSS particle background -->
+    <div class="ct-bg" aria-hidden="true">
+        <span class="ct-node cn1"></span><span class="ct-node cn2"></span>
+        <span class="ct-node cn3"></span><span class="ct-node cn4"></span>
+        <span class="ct-node cn5"></span><span class="ct-node cn6"></span>
+        <span class="ct-node cn7"></span><span class="ct-node cn8"></span>
+        <span class="ct-line cl1"></span><span class="ct-line cl2"></span>
+        <span class="ct-line cl3"></span><span class="ct-line cl4"></span>
+        <span class="ct-line cl5"></span>
+    </div>
+
+    <!-- Blobs -->
+    <div class="ct-blob ct-blob-1" aria-hidden="true"></div>
+    <div class="ct-blob ct-blob-2" aria-hidden="true"></div>
+
+    <div class="ct-container">
+
+        <!-- ── Header ── -->
+        <div class="ct-header">
+            <p class="ct-eyebrow">Get In Touch</p>
+            <h2 class="ct-title">Contact <span>Me</span></h2>
+            <p class="ct-subtitle">Have a project in mind? Let's build something great together.</p>
+        </div>
+
+        <!-- ── Main layout ── -->
+        <div class="ct-layout">
+
+            <!-- ════ LEFT — Info cards ════ -->
+            <div class="ct-info">
+
+                <!-- Profile card -->
+                <div class="ct-profile-card">
+                    <div class="ct-avatar">
+                        <img src="assets/myimage1.jpeg" alt="Thushan Pahasara"/>
+                        <div class="ct-avatar-ring"></div>
+                        <div class="ct-avatar-ring ct-avatar-ring--2"></div>
+                        <span class="ct-status-dot" aria-label="Available"></span>
+                    </div>
+                    <div class="ct-profile-text">
+                        <h3 class="ct-name">Thushan Pahasara</h3>
+                        <p class="ct-role">Full-Stack Learner &amp; UI Designer</p>
+                        <span class="ct-badge"><i class="fas fa-circle"></i> Available for work</span>
+                    </div>
+                </div>
+
+                <!-- Info items -->
+                <div class="ct-info-list">
+
+                    <a href="mailto:thushanpahasara04@gmail.com" class="ct-info-item">
+                        <div class="ct-info-icon" style="--ic:#e91e8c;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="ct-info-text">
+                            <span class="ct-info-label">Email</span>
+                            <p class="ct-info-val">thushanpahasara04@gmail.com</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square ct-info-arrow"></i>
+                    </a>
+
+                    <a href="tel:0769868180" class="ct-info-item">
+                        <div class="ct-info-icon" style="--ic:#4fc3f7;">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="ct-info-text">
+                            <span class="ct-info-label">Phone / WhatsApp</span>
+                            <p class="ct-info-val">+94 76 986 8180</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square ct-info-arrow"></i>
+                    </a>
+
+                    <div class="ct-info-item ct-info-item--plain">
+                        <div class="ct-info-icon" style="--ic:#9c27b0;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="ct-info-text">
+                            <span class="ct-info-label">Location</span>
+                            <p class="ct-info-val">Sri Lanka 🇱🇰</p>
+                        </div>
+                    </div>
+
+                </div><!-- /ct-info-list -->
+
+                <!-- Social row -->
+                <div class="ct-socials">
+                    <p class="ct-socials-label">Find Me On</p>
+                    <div class="ct-social-row">
+                        <a href="https://github.com/Thushan475" target="_blank" rel="noopener" class="ct-soc-btn ct-soc-github" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="ct-soc-btn ct-soc-linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="ct-soc-btn ct-soc-instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="ct-soc-btn ct-soc-facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div><!-- /ct-info -->
+
+            <!-- ════ RIGHT — Contact form ════ -->
+            <form class="ct-form" action="mailto:thushanpahasara04@gmail.com" method="get" enctype="text/plain">
+
+                <div class="ct-form-grid">
+
+                    <div class="ct-field">
+                        <label for="ct-fname" class="ct-label">
+                            <i class="fas fa-user"></i> Your Name
+                        </label>
+                        <input
+                                type="text"
+                                id="ct-fname"
+                                name="name"
+                                placeholder="John Doe"
+                                autocomplete="name"
+                                required
+                        />
+                        <span class="ct-field-line"></span>
+                    </div>
+
+                    <div class="ct-field">
+                        <label for="ct-email" class="ct-label">
+                            <i class="fas fa-envelope"></i> Your Email
+                        </label>
+                        <input
+                                type="email"
+                                id="ct-email"
+                                name="email"
+                                placeholder="john@example.com"
+                                autocomplete="email"
+                                required
+                        />
+                        <span class="ct-field-line"></span>
+                    </div>
+
+                </div><!-- /ct-form-grid -->
+
+                <div class="ct-field">
+                    <label for="ct-subject" class="ct-label">
+                        <i class="fas fa-tag"></i> Subject
+                    </label>
+                    <input
+                            type="text"
+                            id="ct-subject"
+                            name="subject"
+                            placeholder="Project Inquiry / Collaboration..."
+                            required
+                    />
+                    <span class="ct-field-line"></span>
+                </div>
+
+                <div class="ct-field">
+                    <label for="ct-msg" class="ct-label">
+                        <i class="fas fa-comment-dots"></i> Message
+                    </label>
+                    <textarea
+                            id="ct-msg"
+                            name="body"
+                            rows="5"
+                            placeholder="Hi Thushan, I'd love to discuss a project with you..."
+                            required
+                    ></textarea>
+                    <span class="ct-field-line"></span>
+                </div>
+
+                <button type="submit" class="ct-submit">
+                    <span class="ct-submit-text">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </span>
+                    <span class="ct-submit-glow"></span>
+                </button>
+
+            </form><!-- /ct-form -->
+
+        </div><!-- /ct-layout -->
+
+        <!-- ── Bottom decoration ── -->
+        <div class="ct-footer-strip" aria-hidden="true">
+            <span>✦ LET'S BUILD SOMETHING AMAZING</span>
+            <span>✦ OPEN TO FREELANCE</span>
+            <span>✦ AVAILABLE FOR HIRE</span>
+            <span>✦ LET'S BUILD SOMETHING AMAZING</span>
+            <span>✦ OPEN TO FREELANCE</span>
+            <span>✦ AVAILABLE FOR HIRE</span>
+        </div>
+
+    </div><!-- /ct-container -->
+</section>
+
+<!-- NO JAVASCRIPT -->
+</body>
+</html>
