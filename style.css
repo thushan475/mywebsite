@@ -1943,3 +1943,30 @@ a.ct-info-item:hover .ct-info-arrow {
 }
 .ct-submit:hover .ct-submit-glow { opacity: 1; }
 .ct-submit:active                 { transform: translateY(0) scale(0.98); }
+
+
+/* scrolling footer text strip */
+.ct-footer-strip {
+    display:     flex;
+    gap:         56px;
+    width:       max-content;
+    white-space: nowrap;
+    overflow:    hidden;
+    margin-top:  80px;
+    padding:     22px 0;
+    border-top:  1px solid rgba(255, 255, 255, 0.06);
+    animation:   ctTicker 18s linear infinite;
+}
+.ct-footer-strip span {
+    flex-shrink:    0;
+    font-family:    var(--font-main);
+    font-size:      0.78rem;
+    font-weight:    700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color:          rgba(255, 255, 255, 0.35);
+}
+@keyframes ctTicker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
