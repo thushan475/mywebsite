@@ -1485,3 +1485,25 @@ body:hover .cursor-ring {
     animation:      fadeUp .8s .1s var(--ease) both;
 }
 
+.ct-title {
+    font-family:   var(--font-main);
+    font-size:     clamp(2rem, 4.5vw, 3.2rem);
+    font-weight:   800;
+    line-height:   1.1;
+    color:         var(--white);
+    margin-bottom: 12px;
+    animation:     fadeUp .8s .2s var(--ease) both;
+}
+.ct-title span {
+    background: linear-gradient(110deg, var(--pink) 0%, #c471ed 45%, var(--blue) 85%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.ct-subtitle {
+    font-size:   1rem;
+    font-weight: 300;
+    color:       rgba(255, 255, 255, 0.50);
+    animation:   fadeUp .8s .3s var(--ease) both;
+}
+
