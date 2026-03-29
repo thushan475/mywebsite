@@ -1970,3 +1970,20 @@ a.ct-info-item:hover .ct-info-arrow {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
 }
+
+
+/* =====================================================================
+   14. RESPONSIVE BREAKPOINTS
+   ===================================================================== */
+
+/* ── Navbar — tablet ── */
+@media (max-width: 768px) {
+    .navbar {
+        top:           12px;
+        padding:       7px 14px;
+        border-radius: 50px;
+        max-width:     calc(100vw - 20px);
+    }
+    .nav-links       { gap: 0; }
+    .nav-links a     { padding: 6px 10px; font-size: 0.72rem; }
+}
