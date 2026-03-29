@@ -1892,3 +1892,54 @@ a.ct-info-item:hover .ct-info-arrow {
     transition:    width .4s var(--ease);
 }
 .ct-field:focus-within .ct-field-line { width: 100%; }
+
+
+/* send button */
+.ct-submit {
+    position:      relative;
+    overflow:      hidden;
+    width:         100%;
+    margin-top:    4px;
+    padding:       16px 32px;
+    border:        none;
+    border-radius: 14px;
+    font-family:   var(--font-main);
+    font-size:     0.92rem;
+    font-weight:   700;
+    letter-spacing: 0.05em;
+    color:         #fff;
+    cursor:        pointer;
+    background:    linear-gradient(135deg, var(--pink) 0%, var(--purple) 60%, #6a1b9a 100%);
+    transition:    transform .35s var(--ease), box-shadow .35s ease, filter .3s ease;
+}
+.ct-submit-text {
+    position:   relative;
+    z-index:    1;
+    display:    flex;
+    align-items:     center;
+    justify-content: center;
+    gap:        10px;
+}
+.ct-submit-text i {
+    transition: transform .4s cubic-bezier(.34, 1.56, .64, 1);
+}
+.ct-submit:hover .ct-submit-text i {
+    transform: translateX(4px) rotate(-15deg);
+}
+
+.ct-submit-glow {
+    position:   absolute;
+    inset:      0;
+    background: rgba(255, 255, 255, 0.12);
+    opacity:    0;
+    transition: opacity .3s ease;
+}
+.ct-submit:hover {
+    transform:  translateY(-3px);
+    filter:     brightness(1.08);
+    box-shadow:
+            0 0 36px rgba(233, 30, 140, 0.50),
+            0 10px 30px rgba(233, 30, 140, 0.30);
+}
+.ct-submit:hover .ct-submit-glow { opacity: 1; }
+.ct-submit:active                 { transform: translateY(0) scale(0.98); }
