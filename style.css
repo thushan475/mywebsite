@@ -1416,5 +1416,21 @@ body:hover .cursor-ring {
     90%  { opacity: 0.50; }
     100% { opacity: 0.05; transform: translate(var(--dx), var(--dy)); }
 }
+.ct-line {
+    position:        absolute;
+    height:          1px;
+    transform-origin: left center;
+    animation:       ctLinePulse ease-in-out infinite alternate;
+}
+.cl1 { width:140px; background:linear-gradient(90deg, rgba(233,30,140,.65), transparent); top:12%; left:6%;  transform:rotate(15deg);  animation-duration:5s; animation-delay:.4s; }
+.cl2 { width:110px; background:linear-gradient(90deg, rgba(79,195,247,.65), transparent); top:55%; left:62%; transform:rotate(-30deg); animation-duration:6s; animation-delay:1s;  }
+.cl3 { width:180px; background:linear-gradient(90deg, rgba(233,30,140,.45), transparent); top:72%; left:18%; transform:rotate(6deg);   animation-duration:7s; animation-delay:2s;  }
+.cl4 { width:120px; background:linear-gradient(90deg, rgba(156,39,176,.60), transparent); top:28%; left:80%; transform:rotate(60deg);  animation-duration:4s; animation-delay:.8s; }
+.cl5 { width:160px; background:linear-gradient(90deg, rgba(79,195,247,.50), transparent); top:88%; left:55%; transform:rotate(-12deg); animation-duration:8s; animation-delay:3s;  }
+
+@keyframes ctLinePulse {
+    from { opacity: 0.04; }
+    to   { opacity: 0.55; }
+}
 
 
