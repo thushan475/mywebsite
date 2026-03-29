@@ -1774,3 +1774,22 @@ a.ct-info-item:hover .ct-info-arrow {
 .ct-soc-facebook  { color: #1877f2; }
 .ct-soc-facebook::before  { background: #1877f2; }
 .ct-soc-facebook:hover    { color: #fff; border-color: #1877f2; box-shadow: 0 8px 22px rgba(24,119,242,.40); }
+
+
+/* ── right — contact form ── */
+.ct-form {
+    display:        flex;
+    flex-direction: column;
+    gap:            22px;
+    padding:        36px 38px 40px;
+    border-radius:  26px;
+    position:       relative;
+    overflow:       hidden;
+    background:     var(--glass-bg);
+    border:         1px solid var(--glass-border);
+    backdrop-filter:         blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow:
+            0 8px 48px rgba(0, 0, 0, 0.40),
+            0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
