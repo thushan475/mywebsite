@@ -1538,3 +1538,19 @@ body:hover .cursor-ring {
     transition:  border-color .35s ease, box-shadow .35s ease;
 }
 
+
+.ct-profile-card:hover {
+    border-color: rgba(233, 30, 140, 0.40);
+    box-shadow:
+            0 0 0 1px rgba(233, 30, 140, 0.30),
+            0 8px 40px rgba(233, 30, 140, 0.15);
+}
+
+/* avatar */
+.ct-avatar {
+    position:    relative;
+    flex-shrink: 0;
+    width:  80px;
+    height: 80px;
+}
+
