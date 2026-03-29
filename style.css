@@ -1381,6 +1381,11 @@ body:hover .cursor-ring {
 /* =====================================================================
    CONTACT SECTION WRAPPER
    ===================================================================== */
-
+.contact-section {
+    position:   relative;
+    padding:    110px 0 0;
+    background: var(--bg2);
+    overflow:   hidden;
+}
 
 
