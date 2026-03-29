@@ -1506,4 +1506,19 @@ body:hover .cursor-ring {
     color:       rgba(255, 255, 255, 0.50);
     animation:   fadeUp .8s .3s var(--ease) both;
 }
+/* ── two-column layout ── */
+.ct-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: start;
+    gap:         40px;
+    animation:   fadeUp .9s .35s var(--ease) both;
+}
+
+/* ── left info panel ── */
+.ct-info {
+    display:        flex;
+    flex-direction: column;
+    gap:            24px;
+}
 
