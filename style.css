@@ -1746,3 +1746,12 @@ a.ct-info-item:hover .ct-info-arrow {
             background   .3s ease,
             border-color .3s ease;
 }
+
+.ct-soc-btn::before {
+    content:  '';
+    position: absolute;
+    inset:    0;
+    opacity:  0;
+    transition: opacity .3s ease;
+}
+.
