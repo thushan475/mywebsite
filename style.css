@@ -1447,5 +1447,17 @@ body:hover .cursor-ring {
     top: -120px; left: -100px;
     animation-duration: 15s;
 }
+.ct-blob-2 {
+    width:  440px; height: 440px;
+    background: radial-gradient(circle, rgba(79,195,247,.10), rgba(26,35,126,.06));
+    bottom: 60px; right: -80px;
+    animation-duration:  11s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes ctBlobDrift {
+    from { transform: translate(0, 0) scale(1); }
+    to   { transform: translate(28px, 36px) scale(1.06); }
+}
 
 
