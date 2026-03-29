@@ -522,11 +522,11 @@ body:hover .cursor-ring {
 
 .carousel {
     position:      relative;
-    width:         clamp(220px, 32vw, 350px);
-    height:        clamp(300px, 44vw, 480px);
+    width:         clamp(550px, 32vw, 500px);
+    height:        clamp(300px, 44vw, 700px);
     border-radius: 26px;
     overflow:      hidden;
-    border:        2px solid var(--glass-border);
+    border:        5px solid greenyellow;
     box-shadow:
             0 30px 80px rgba(0, 0, 0, 0.60),
             0 0 0 1px rgba(255, 255, 255, 0.08);
@@ -659,7 +659,7 @@ body:hover .cursor-ring {
     height:        400px;
     border-radius: 24px;
     overflow:      hidden;
-    border:        2px solid var(--glass-border);
+    border:        2px solid deeppink;
     box-shadow:    0 30px 80px rgba(0, 0, 0, 0.50);
 }
 
