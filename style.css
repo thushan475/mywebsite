@@ -1578,4 +1578,21 @@ body:hover .cursor-ring {
     animation-delay: 1.5s;
 }
 
+@keyframes ringPulse {
+    0%,  100% { transform: scale(1);    opacity: 0.6; }
+    50%        { transform: scale(1.06); opacity: 1;   }
+}
+
+/* green online dot */
+.ct-status-dot {
+    position:      absolute;
+    bottom: 3px;
+    right:  3px;
+    width:  13px;
+    height: 13px;
+    border-radius: 50%;
+    background:    #22c55e;
+    border:        2px solid var(--bg2);
+    animation:     statusBlink 2.5s ease-in-out infinite;
+}
 
