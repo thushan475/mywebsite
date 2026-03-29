@@ -1467,5 +1467,21 @@ body:hover .cursor-ring {
     position:  relative;
     z-index:   2;
 }
-
+/* ── header ── */
+.ct-header {
+    text-align:    center;
+    margin-bottom: 70px;
+    animation:     fadeUp .9s var(--ease) both;
+}
+.ct-eyebrow {
+    display:        block;
+    font-family:    var(--font-main);
+    font-size:      0.75rem;
+    font-weight:    700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color:          var(--pink);
+    margin-bottom:  10px;
+    animation:      fadeUp .8s .1s var(--ease) both;
+}
 
