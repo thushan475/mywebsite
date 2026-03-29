@@ -1848,3 +1848,32 @@ a.ct-info-item:hover .ct-info-arrow {
 }
 .ct-label i { font-size: 0.70rem; color: var(--pink); }
 .ct-field:focus-within .ct-label { color: var(--pink); }
+
+
+.ct-field input,
+.ct-field textarea {
+    width:        100%;
+    padding:      13px 16px;
+    border-radius: 12px;
+    font-family:   var(--font-body);
+    font-size:     0.92rem;
+    font-weight:   300;
+    color:         var(--white);
+    background:    rgba(255, 255, 255, 0.04);
+    border:        1px solid rgba(255, 255, 255, 0.10);
+    outline:       none;
+    resize:        none;
+    transition:    border-color .3s ease, background .3s ease, box-shadow .3s ease;
+}
+.ct-field input::placeholder,
+.ct-field textarea::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+.ct-field input:focus,
+.ct-field textarea:focus {
+    border-color: rgba(233, 30, 140, 0.60);
+    background:   rgba(233, 30, 140, 0.04);
+    box-shadow:
+            0 0 0 3px rgba(233, 30, 140, 0.12),
+            0 4px 20px rgba(233, 30, 140, 0.08);
+}
