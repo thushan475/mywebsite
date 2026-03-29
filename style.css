@@ -1818,3 +1818,33 @@ a.ct-info-item:hover .ct-info-arrow {
     background:    radial-gradient(circle, rgba(233,30,140,.10), transparent 70%);
     pointer-events: none;
 }
+
+/* name + email two-column row */
+.ct-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+/* single field */
+.ct-field {
+    display:        flex;
+    flex-direction: column;
+    gap:            8px;
+    position:       relative;
+}
+
+.ct-label {
+    display:        flex;
+    align-items:    center;
+    gap:            7px;
+    font-family:    var(--font-main);
+    font-size:      0.72rem;
+    font-weight:    700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color:          rgba(255, 255, 255, 0.55);
+    transition:     color .3s ease;
+}
+.ct-label i { font-size: 0.70rem; color: var(--pink); }
+.ct-field:focus-within .ct-label { color: var(--pink); }
