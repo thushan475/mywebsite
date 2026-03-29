@@ -1754,4 +1754,23 @@ a.ct-info-item:hover .ct-info-arrow {
     opacity:  0;
     transition: opacity .3s ease;
 }
-.
+
+.ct-soc-btn:hover           { transform: translateY(-5px) scale(1.08); }
+.ct-soc-btn:hover::before   { opacity: 1; }
+.ct-soc-btn i               { position: relative; z-index: 1; }
+
+.ct-soc-github    { color: #fff; }
+.ct-soc-github::before    { background: #24292e; }
+.ct-soc-github:hover      { border-color: #fff; box-shadow: 0 8px 22px rgba(255,255,255,.15); }
+
+.ct-soc-linkedin  { color: #0a66c2; }
+.ct-soc-linkedin::before  { background: #0a66c2; }
+.ct-soc-linkedin:hover    { color: #fff; border-color: #0a66c2; box-shadow: 0 8px 22px rgba(10,102,194,.40); }
+
+.ct-soc-instagram { color: #e1306c; }
+.ct-soc-instagram::before { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.ct-soc-instagram:hover   { color: #fff; border-color: #e1306c; box-shadow: 0 8px 22px rgba(225,48,108,.40); }
+
+.ct-soc-facebook  { color: #1877f2; }
+.ct-soc-facebook::before  { background: #1877f2; }
+.ct-soc-facebook:hover    { color: #fff; border-color: #1877f2; box-shadow: 0 8px 22px rgba(24,119,242,.40); }
