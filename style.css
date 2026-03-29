@@ -2008,3 +2008,14 @@ a.ct-info-item:hover .ct-info-arrow {
     }
     .nav-links a { padding: 5px 6px; font-size: 0.60rem; }
 }
+
+/* ── Laptop 1024px ── */
+@media (max-width: 1024px) {
+    .hero             { padding: 120px 6% 80px; gap: 40px; }
+    .about-wrapper    { gap: 50px; }
+    .about-image-card { width: 270px; height: 340px; }
+    .skills-grid      { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; }
+    .gallery-grid     { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .ct-layout        { gap: 28px; }
+    .ct-form          { padding: 28px 28px 32px; }
+}
