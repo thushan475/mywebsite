@@ -1805,3 +1805,16 @@ a.ct-info-item:hover .ct-info-arrow {
     background:    linear-gradient(90deg, var(--pink), var(--purple), var(--blue));
     border-radius: 26px 26px 0 0;
 }
+
+/* top-right corner glow */
+.ct-form::after {
+    content:  '';
+    position: absolute;
+    top:  -60px;
+    right: -60px;
+    width:  200px;
+    height: 200px;
+    border-radius: 50%;
+    background:    radial-gradient(circle, rgba(233,30,140,.10), transparent 70%);
+    pointer-events: none;
+}
