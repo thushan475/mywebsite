@@ -1684,4 +1684,29 @@ a.ct-info-item:hover,
     box-shadow: 0 0 18px color-mix(in srgb, var(--ic, var(--pink)) 45%, transparent);
 }
 
+.ct-info-text { flex: 1; }
+.ct-info-label {
+    display:        block;
+    font-family:    var(--font-main);
+    font-size:      0.65rem;
+    font-weight:    700;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color:          var(--pink);
+    margin-bottom:  3px;
+}
+.ct-info-val {
+    font-size:   0.90rem;
+    font-weight: 400;
+    color:       var(--white);
+    word-break:  break-all;
+}
+
+.ct-info-arrow {
+    font-size:  0.70rem;
+    color:      var(--muted);
+    opacity:    0;
+    transform:  translateX(-4px);
+    transition: opacity .3s ease, transform .3s ease;
+}
 
