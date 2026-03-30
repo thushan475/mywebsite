@@ -128,9 +128,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
     background:       var(--nav-bg);
     backdrop-filter:  blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border:        1px solid var(--glass-border);
+    border:        1px solid white;
     border-radius: 60px;
-    padding:       9px 24px;
+    padding:       20px 34px;
 
     box-shadow:
             0 4px 32px rgba(0, 0, 0, 0.50),
@@ -165,8 +165,8 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .nav-links a {
     display:        inline-block;
     font-family:    var(--font-main);
-    font-size:      0.82rem;
-    font-weight:    600;
+    font-size:      1.1rem;
+    font-weight:    700;
     letter-spacing: 0.02em;
     white-space:    nowrap;
     padding:        7px 16px;
@@ -317,7 +317,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .hero-left {
     position:  relative;
     z-index:   2;
-    max-width: 520px;
+    max-width: 900px;
     animation: fadeSlideUp 0.9s var(--ease) both;
 }
 
@@ -332,16 +332,17 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .hero-title {
     font-family: var(--font-main);
-    font-size:   clamp(1.4rem, 2.8vw, 2.1rem);
-    font-weight: 800;
-    line-height: 1.25;
-    min-height:  2.8em;
+    font-size:   clamp(3.5rem, 4.8vw, 3.1rem);
+    font-weight: 900;
+    line-height: 1.2;
+    min-height: auto;
     margin-bottom: 22px;
     animation:   fadeSlideUp 0.9s 0.2s both;
     background:  linear-gradient(110deg, var(--pink) 0%, #c471ed 40%, var(--blue) 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    overflow: visible;
 }
 
 #typed { display: inline; white-space: nowrap; }
@@ -356,11 +357,11 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 
 .hero-desc {
-    font-size:   0.97rem;
+    font-size:   1.2rem;
     line-height: 1.75;
-    font-weight: 300;
+    font-weight: 400;
     color:       rgba(255, 255, 255, 0.62);
-    margin-bottom: 32px;
+    margin-bottom: 82px;
     animation:   fadeSlideUp 0.9s 0.3s both;
 }
 
@@ -371,7 +372,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .find-me {
     font-family:    var(--font-main);
-    font-size:      0.78rem;
+    font-size:         1.5rem;
     font-weight:    600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -379,7 +380,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
     margin-bottom:  14px;
 }
 
-.social-icons { display: flex; gap: 12px; flex-wrap: wrap; }
+.social-icons { display: flex; gap: 20px; flex-wrap: wrap; }
 
 .social-btn {
     width:  46px;
@@ -424,19 +425,20 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 .hero-buttons {
     display:   flex;
-    gap:       16px;
+    gap:       20px;
     flex-wrap: wrap;
     animation: fadeSlideUp 0.9s 0.5s both;
+    margin-top: 40px;
 }
 
 .btn {
     display:    inline-flex;
     align-items: center;
-    gap:        9px;
-    padding:    13px 28px;
+    gap:        12px;
+    padding:    16px 40px;
     border-radius: 50px;
     font-family:    var(--font-main);
-    font-size:      0.88rem;
+    font-size:      1.3rem;
     font-weight:    700;
     letter-spacing: 0.03em;
     position:  relative;
@@ -489,7 +491,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
     height:        clamp(300px, 44vw, 700px);
     border-radius: 26px;
     overflow:      hidden;
-    border:        5px solid greenyellow;
+    border:        5px solid cornflowerblue;
     box-shadow:
             0 30px 80px rgba(0, 0, 0, 0.60),
             0 0 0 1px rgba(255, 255, 255, 0.08);
