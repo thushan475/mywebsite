@@ -1997,3 +1997,20 @@ a.ct-info-item:hover .ct-info-arrow {
     .ct-form          { padding: 20px 16px 24px; border-radius: 18px; }
     .ct-soc-btn       { width: 42px; height: 42px; font-size: 1rem; }
 }
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: clamp(1.8rem, 8vw, 2.4rem) !important;
+        line-height: 1.2;
+        min-height: 3.2rem;
+        word-break: keep-all;
+    }
+
+    .hero-left {
+        max-width: 100%;
+        padding-right: 15px;
+    }
+
+    #typed {
+        white-space: normal;
+    }
+}
