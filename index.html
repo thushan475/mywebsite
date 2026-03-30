@@ -7,19 +7,6 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <style>
-        .mouse-trail {
-            position: fixed;
-            width: 8px; height: 8px;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9997;
-            mix-blend-mode: screen;
-            animation: trailFade 800ms ease-out forwards;
-        }
-        @keyframes trailFade { to { opacity: 0; transform: scale(0.2); } }
-        body { cursor: none; }
-    </style>
 </head>
 <body>
 
@@ -268,11 +255,326 @@
 </section>
 <!-- ============================= END SKILLS ============================= -->
 
+<!-- ==================== GALLERY SECTION ==================== -->
+<section class="gallery-section" id="Gallery">
+
+    <div class="bg-net" aria-hidden="true">
+        <span class="node n1"></span><span class="node n2"></span>
+        <span class="node n3"></span><span class="node n4"></span>
+        <span class="node n5"></span><span class="node n6"></span>
+        <span class="node n7"></span><span class="node n8"></span>
+        <span class="node n9"></span><span class="node n10"></span>
+        <span class="node n11"></span><span class="node n12"></span>
+        <span class="line l1"></span><span class="line l2"></span>
+        <span class="line l3"></span><span class="line l4"></span>
+        <span class="line l5"></span><span class="line l6"></span>
+        <span class="line l7"></span><span class="line l8"></span>
+    </div>
+
+    <div class="g-blob g-blob-1" aria-hidden="true"></div>
+    <div class="g-blob g-blob-2" aria-hidden="true"></div>
+    <div class="g-blob g-blob-3" aria-hidden="true"></div>
+
+    <div class="container">
+        <div class="section-header">
+            <p class="section-eyebrow">Visual Stories</p>
+            <h2 class="section-title">My <span>Gallery</span></h2>
+            <p class="section-subtitle">A glimpse into my world through the lens</p>
+        </div>
+
+        <div class="gallery-grid">
+
+            <a href="#lb-1" class="g-card g-card--tall">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage1.jpeg" alt="Portrait I" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <p class="g-caption"><span class="g-num">01</span> Portrait I</p>
+            </a>
+
+            <a href="#lb-2" class="g-card">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage2.jpeg" alt="Portrait II" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <p class="g-caption"><span class="g-num">02</span> Portrait II</p>
+            </a>
+
+            <a href="#lb-3" class="g-card">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage3.jpeg" alt="Portrait III" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <p class="g-caption"><span class="g-num">03</span> Portrait III</p>
+            </a>
+
+            <a href="#lb-4" class="g-card g-card--wide">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage4.jpeg" alt="Featured" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <p class="g-caption"><span class="g-num">04</span> Featured</p>
+            </a>
+
+            <a href="#lb-5" class="g-card">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage1.jpeg" alt="Candid V" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <p class="g-caption"><span class="g-num">05</span> Candid V</p>
+            </a>
+
+            <a href="#lb-6" class="g-card g-card--tall">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage6.jpeg" alt="Depth VI" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <p class="g-caption"><span class="g-num">06</span> Depth VI</p>
+            </a>
+
+            <a href="#lb-7" class="g-card">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage.jpeg" alt="Visual VII" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <p class="g-caption"><span class="g-num">07</span> Visual VII</p>
+            </a>
+
+            <a href="#lb-8" class="g-card">
+                <div class="g-tape" aria-hidden="true"></div>
+                <div class="g-img-wrap">
+                    <img src="assets/myimage.jpeg" alt="Frame VIII" loading="lazy"/>
+                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
+                </div>
+                <p class="g-caption"><span class="g-num">08</span> Frame VIII</p>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==================== LIGHTBOXES ==================== -->
+
+<div class="lightbox" id="lb-1">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap"><img src="assets/myimage1.jpeg" alt="Portrait I"/></div>
+        <div class="lb-meta"><span class="lb-title">Portrait I</span><span class="lb-counter">01 / 08</span></div>
+    </div>
+</div>
+
+<div class="lightbox" id="lb-2">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap"><img src="assets/myimage2.jpeg" alt="Portrait II"/></div>
+        <div class="lb-meta"><span class="lb-title">Portrait II</span><span class="lb-counter">02 / 08</span></div>
+    </div>
+</div>
+
+<div class="lightbox" id="lb-3">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap"><img src="assets/myimage3.jpeg" alt="Portrait III"/></div>
+        <div class="lb-meta"><span class="lb-title">Portrait III</span><span class="lb-counter">03 / 08</span></div>
+    </div>
+</div>
+
+<div class="lightbox" id="lb-4">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap"><img src="assets/myimage4.jpeg" alt="Featured"/></div>
+        <div class="lb-meta"><span class="lb-title">Featured</span><span class="lb-counter">04 / 08</span></div>
+    </div>
+</div>
+
+<div class="lightbox" id="lb-5">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap"><img src="assets/myimage1.jpeg" alt="Candid V"/></div>
+        <div class="lb-meta"><span class="lb-title">Candid V</span><span class="lb-counter">05 / 08</span></div>
+    </div>
+</div>
+
+<div class="lightbox" id="lb-6">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap"><img src="assets/myimage6.jpeg" alt="Depth VI"/></div>
+        <div class="lb-meta"><span class="lb-title">Depth VI</span><span class="lb-counter">06 / 08</span></div>
+    </div>
+</div>
+
+<div class="lightbox" id="lb-7">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap"><img src="assets/myimage.jpeg" alt="Visual VII"/></div>
+        <div class="lb-meta"><span class="lb-title">Visual VII</span><span class="lb-counter">07 / 08</span></div>
+    </div>
+</div>
+
+<div class="lightbox" id="lb-8">
+    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
+    <div class="lb-box">
+        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
+        <div class="lb-img-wrap"><img src="assets/myimage.jpeg" alt="Frame VIII"/></div>
+        <div class="lb-meta"><span class="lb-title">Frame VIII</span><span class="lb-counter">08 / 08</span></div>
+    </div>
+</div>
+
+<!-- ======================== CONTACT SECTION ======================== -->
+<section class="contact-section" id="contact">
+
+    <div class="ct-bg" aria-hidden="true">
+        <span class="ct-node cn1"></span>
+        <span class="ct-node cn2"></span>
+        <span class="ct-node cn3"></span>
+        <span class="ct-node cn4"></span>
+        <span class="ct-node cn5"></span>
+        <span class="ct-node cn6"></span>
+        <span class="ct-node cn7"></span>
+        <span class="ct-node cn8"></span>
+        <span class="ct-line cl1"></span>
+        <span class="ct-line cl2"></span>
+        <span class="ct-line cl3"></span>
+        <span class="ct-line cl4"></span>
+        <span class="ct-line cl5"></span>
+    </div>
+    <div class="ct-blob ct-blob-1" aria-hidden="true"></div>
+    <div class="ct-blob ct-blob-2" aria-hidden="true"></div>
+
+    <div class="ct-container">
+
+        <div class="ct-header">
+            <p class="ct-eyebrow">Get In Touch</p>
+            <h2 class="ct-title">Contact <span>Me</span></h2>
+            <p class="ct-subtitle">Have a project in mind? Let's build something great together.</p>
+        </div>
+
+        <div class="ct-layout">
+
+            <div class="ct-info">
+
+                <div class="ct-profile-card">
+                    <div class="ct-avatar">
+                        <img src="assets/myimage1.jpeg" alt="Thushan Pahasara" />
+                        <div class="ct-avatar-ring"></div>
+                        <div class="ct-avatar-ring ct-avatar-ring--2"></div>
+                        <span class="ct-status-dot" aria-label="Available"></span>
+                    </div>
+                    <div class="ct-profile-text">
+                        <h3 class="ct-name">Thushan Pahasara</h3>
+                        <p class="ct-role">Full-Stack Learner &amp; UI Designer</p>
+                        <span class="ct-badge">
+                            <i class="fas fa-circle"></i> Available for work
+                        </span>
+                    </div>
+                </div>
+
+                <div class="ct-info-list">
+                    <a href="mailto:thushanpahasara04@gmail.com" class="ct-info-item">
+                        <div class="ct-info-icon" style="--ic: #e91e8c;"><i class="fas fa-envelope"></i></div>
+                        <div class="ct-info-text">
+                            <span class="ct-info-label">Email</span>
+                            <p class="ct-info-val">thushanpahasara04@gmail.com</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square ct-info-arrow"></i>
+                    </a>
+                    <a href="tel:+94769868180" class="ct-info-item">
+                        <div class="ct-info-icon" style="--ic: #4fc3f7;"><i class="fas fa-phone"></i></div>
+                        <div class="ct-info-text">
+                            <span class="ct-info-label">Phone / WhatsApp</span>
+                            <p class="ct-info-val">+94 76 986 8180</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square ct-info-arrow"></i>
+                    </a>
+                    <div class="ct-info-item">
+                        <div class="ct-info-icon" style="--ic: #9c27b0;"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="ct-info-text">
+                            <span class="ct-info-label">Location</span>
+                            <p class="ct-info-val">Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ct-socials">
+                    <p class="ct-socials-label">Find Me On</p>
+                    <div class="ct-social-row">
+                        <a href="https://github.com/Thushan475" target="_blank" rel="noopener" class="ct-soc-btn ct-soc-github" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="ct-soc-btn ct-soc-linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="ct-soc-btn ct-soc-instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="ct-soc-btn ct-soc-facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <form class="ct-form" action="mailto:thushanpahasara04@gmail.com" method="get" enctype="text/plain">
+
+                <div class="ct-form-grid">
+                    <div class="ct-field">
+                        <label for="ct-fname" class="ct-label"><i class="fas fa-user"></i> Your Name</label>
+                        <input type="text" id="ct-fname" name="name" placeholder="Thushan Pahasara" autocomplete="name" required/>
+                        <span class="ct-field-line"></span>
+                    </div>
+                    <div class="ct-field">
+                        <label for="ct-email" class="ct-label"><i class="fas fa-envelope"></i> Your Email</label>
+                        <input type="email" id="ct-email" name="email" placeholder="Thushan@example.com" autocomplete="email" required/>
+                        <span class="ct-field-line"></span>
+                    </div>
+                </div>
+
+                <div class="ct-field">
+                    <label for="ct-subject" class="ct-label"><i class="fas fa-tag"></i> Subject</label>
+                    <input type="text" id="ct-subject" name="subject" placeholder="Project Inquiry..." required/>
+                    <span class="ct-field-line"></span>
+                </div>
+
+                <div class="ct-field">
+                    <label for="ct-msg" class="ct-label"><i class="fas fa-comment-dots"></i> Message</label>
+                    <textarea id="ct-msg" name="body" rows="5" placeholder="Hi Thushan, I'd love to discuss a project with you..." required></textarea>
+                    <span class="ct-field-line"></span>
+                </div>
+
+                <button type="submit" class="ct-submit">
+                    <span class="ct-submit-text"><i class="fas fa-paper-plane"></i> Send Message</span>
+                    <span class="ct-submit-glow"></span>
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="ct-footer-strip" aria-hidden="true">
+            <span>&#10022; LET'S BUILD SOMETHING AMAZING</span>
+            <span>&#10022; OPEN TO FREELANCE</span>
+            <span>&#10022; AVAILABLE FOR HIRE</span>
+            <span>&#10022; LET'S BUILD SOMETHING AMAZING</span>
+            <span>&#10022; OPEN TO FREELANCE</span>
+            <span>&#10022; AVAILABLE FOR HIRE</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== JAVASCRIPT ==================== -->
 <script>
     // ==================== TYPING EFFECT ====================
-    const words       = ["Web Developer", "UI Designer", "Freelancer"];
-    let wordIndex = 0, charIndex = 0, isDeleting = false;
-    const typedEl     = document.getElementById('typed');
+    const words    = ["Web Developer", "UI Designer", "Freelancer"];
+    let wordIndex  = 0, charIndex = 0, isDeleting = false;
+    const typedEl  = document.getElementById('typed');
 
     function type() {
         const word = words[wordIndex];
@@ -281,8 +583,8 @@
             : word.substring(0, charIndex + 1);
         isDeleting ? charIndex-- : charIndex++;
         let speed = isDeleting ? 45 : 85;
-        if (!isDeleting && charIndex === word.length)   { speed = 1600; isDeleting = true; }
-        else if (isDeleting && charIndex === 0)          { isDeleting = false; wordIndex = (wordIndex + 1) % words.length; speed = 500; }
+        if (!isDeleting && charIndex === word.length)  { speed = 1600; isDeleting = true; }
+        else if (isDeleting && charIndex === 0)         { isDeleting = false; wordIndex = (wordIndex + 1) % words.length; speed = 500; }
         setTimeout(type, speed);
     }
     type();
@@ -299,8 +601,8 @@
         t.className = 'mouse-trail';
         Object.assign(t.style, {
             left: mx + 'px', top: my + 'px',
-            background:  Math.random() > .5 ? 'var(--pink)' : 'var(--blue)',
-            boxShadow:   Math.random() > .5 ? '0 0 10px var(--pink)' : '0 0 10px var(--blue)'
+            background: Math.random() > .5 ? 'var(--pink)' : 'var(--blue)',
+            boxShadow:  Math.random() > .5 ? '0 0 10px var(--pink)' : '0 0 10px var(--blue)'
         });
         document.body.appendChild(t);
         setTimeout(() => t.remove(), 800);
@@ -327,7 +629,7 @@
         pc.appendChild(p);
     }
 
-    // ==================== SKILL CARDS — SCROLL REVEAL ====================
+    // ==================== SKILL CARDS SCROLL REVEAL ====================
     const io = new IntersectionObserver(entries => {
         entries.forEach((entry, idx) => {
             if (entry.isIntersecting) {
@@ -337,469 +639,27 @@
         });
     }, { threshold: 0.12 });
     document.querySelectorAll('.skill-card').forEach(c => io.observe(c));
+
+    // ==================== NAVBAR SCROLL HIDE ====================
+    (function () {
+        var nav   = document.querySelector('.navbar');
+        var lastY = 0;
+        var tick  = false;
+        window.addEventListener('scroll', function () {
+            if (!tick) {
+                requestAnimationFrame(function () {
+                    var y = window.scrollY;
+                    if (y < 60)       nav.classList.remove('nav-hidden');
+                    else if (y > lastY) nav.classList.add('nav-hidden');
+                    else              nav.classList.remove('nav-hidden');
+                    lastY = y;
+                    tick  = false;
+                });
+                tick = true;
+            }
+        });
+    })();
 </script>
-
-
-
-
-<!-- ==================== GALLERY SECTION ==================== -->
-<section class="gallery-section" id="Gallery">
-
-    <!-- CSS-only particle/network background nodes -->
-    <div class="bg-net" aria-hidden="true">
-        <span class="node n1"></span><span class="node n2"></span>
-        <span class="node n3"></span><span class="node n4"></span>
-        <span class="node n5"></span><span class="node n6"></span>
-        <span class="node n7"></span><span class="node n8"></span>
-        <span class="node n9"></span><span class="node n10"></span>
-        <span class="node n11"></span><span class="node n12"></span>
-        <span class="line l1"></span><span class="line l2"></span>
-        <span class="line l3"></span><span class="line l4"></span>
-        <span class="line l5"></span><span class="line l6"></span>
-        <span class="line l7"></span><span class="line l8"></span>
-    </div>
-
-    <!-- Blobs -->
-    <div class="g-blob g-blob-1" aria-hidden="true"></div>
-    <div class="g-blob g-blob-2" aria-hidden="true"></div>
-    <div class="g-blob g-blob-3" aria-hidden="true"></div>
-
-    <div class="container">
-
-        <!-- Section Header -->
-        <div class="section-header">
-            <p class="section-eyebrow">Visual Stories</p>
-            <h2 class="section-title">My <span>Gallery</span></h2>
-            <p class="section-subtitle">A glimpse into my world through the lens</p>
-        </div>
-
-        <!-- ===== GALLERY GRID ===== -->
-        <div class="gallery-grid">
-
-            <!-- Card 1 · tall ─ links to lightbox #lb-1 -->
-            <a href="#lb-1" class="g-card g-card--tall">
-                <div class="g-tape" aria-hidden="true"></div>
-                <div class="g-img-wrap">
-                    <img src="assets/myimage1.jpeg" alt="Portrait I" loading="lazy"/>
-                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <p class="g-caption"><span class="g-num">01</span> Portrait I</p>
-            </a>
-
-            <!-- Card 2 · normal -->
-            <a href="#lb-2" class="g-card">
-                <div class="g-tape" aria-hidden="true"></div>
-                <div class="g-img-wrap">
-                    <img src="assets/myimage2.jpeg" alt="Portrait II" loading="lazy"/>
-                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <p class="g-caption"><span class="g-num">02</span> Portrait II</p>
-            </a>
-
-            <!-- Card 3 · normal -->
-            <a href="#lb-3" class="g-card">
-                <div class="g-tape" aria-hidden="true"></div>
-                <div class="g-img-wrap">
-                    <img src="assets/myimage3.jpeg" alt="Portrait III" loading="lazy"/>
-                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <p class="g-caption"><span class="g-num">03</span> Portrait III</p>
-            </a>
-
-            <!-- Card 4 · wide -->
-            <a href="#lb-4" class="g-card g-card--wide">
-                <div class="g-tape" aria-hidden="true"></div>
-                <div class="g-img-wrap">
-                    <img src="assets/myimage4.jpeg" alt="Featured" loading="lazy"/>
-                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <p class="g-caption"><span class="g-num">04</span> Featured</p>
-            </a>
-
-            <!-- Card 5 · normal -->
-            <a href="#lb-5" class="g-card">
-                <div class="g-tape" aria-hidden="true"></div>
-                <div class="g-img-wrap">
-                    <img src="assets/myimage1.jpeg" alt="Candid V" loading="lazy"/>
-                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <p class="g-caption"><span class="g-num">05</span> Candid V</p>
-            </a>
-
-            <!-- Card 6 · tall -->
-            <a href="#lb-6" class="g-card g-card--tall">
-                <div class="g-tape" aria-hidden="true"></div>
-                <div class="g-img-wrap">
-                    <img src="assets/myimage6.jpeg" alt="Depth VI" loading="lazy"/>
-                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <p class="g-caption"><span class="g-num">06</span> Depth VI</p>
-            </a>
-
-            <!-- Card 7 · normal -->
-            <a href="#lb-7" class="g-card">
-                <div class="g-tape" aria-hidden="true"></div>
-                <div class="g-img-wrap">
-                    <img src="assets/myimage.jpeg" alt="Visual VII" loading="lazy"/>
-                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <p class="g-caption"><span class="g-num">07</span> Visual VII</p>
-            </a>
-
-            <!-- Card 8 · normal -->
-            <a href="#lb-8" class="g-card">
-                <div class="g-tape" aria-hidden="true"></div>
-                <div class="g-img-wrap">
-                    <img src="assets/myimage.jpeg" alt="Frame VIII" loading="lazy"/>
-                    <div class="g-overlay" aria-hidden="true"><i class="fas fa-expand-alt"></i></div>
-                </div>
-                <p class="g-caption"><span class="g-num">08</span> Frame VIII</p>
-            </a>
-
-        </div><!-- /gallery-grid -->
-    </div><!-- /container -->
-</section>
-
-
-<!-- ==================== CSS-ONLY LIGHTBOXES (:target) ==================== -->
-
-
-<!-- Lightbox 1 -->
-<div class="lightbox" id="lb-1">
-    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
-    <div class="lb-box">
-        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
-        <div class="lb-img-wrap">
-            <img src="assets/myimage1.jpeg" alt="Portrait I"/>
-        </div>
-        <div class="lb-meta">
-            <span class="lb-title">Portrait I</span>
-            <span class="lb-counter">01 / 08</span>
-        </div>
-    </div>
-</div>
-
-<!-- Lightbox 2 -->
-<div class="lightbox" id="lb-2">
-    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
-    <div class="lb-box">
-        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
-        <div class="lb-img-wrap">
-            <img src="assets/myimage2.jpeg" alt="Portrait II"/>
-        </div>
-        <div class="lb-meta">
-            <span class="lb-title">Portrait II</span>
-            <span class="lb-counter">02 / 08</span>
-        </div>
-    </div>
-</div>
-
-<!-- Lightbox 3 -->
-<div class="lightbox" id="lb-3">
-    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
-    <div class="lb-box">
-        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
-        <div class="lb-img-wrap">
-            <img src="assets/myimage3.jpeg" alt="Portrait III"/>
-        </div>
-        <div class="lb-meta">
-            <span class="lb-title">Portrait III</span>
-            <span class="lb-counter">03 / 08</span>
-        </div>
-    </div>
-</div>
-
-<!-- Lightbox 4 -->
-<div class="lightbox" id="lb-4">
-    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
-    <div class="lb-box">
-        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
-        <div class="lb-img-wrap">
-            <img src="assets/myimage4.jpeg" alt="Featured"/>
-        </div>
-        <div class="lb-meta">
-            <span class="lb-title">Featured</span>
-            <span class="lb-counter">04 / 08</span>
-        </div>
-    </div>
-</div>
-
-<!-- Lightbox 5 -->
-<div class="lightbox" id="lb-5">
-    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
-    <div class="lb-box">
-        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
-        <div class="lb-img-wrap">
-            <img src="assets/myimage1.jpeg" alt="Candid V"/>
-        </div>
-        <div class="lb-meta">
-            <span class="lb-title">Candid V</span>
-            <span class="lb-counter">05 / 08</span>
-        </div>
-    </div>
-</div>
-
-<!-- Lightbox 6 -->
-<div class="lightbox" id="lb-6">
-    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
-    <div class="lb-box">
-        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
-        <div class="lb-img-wrap">
-            <img src="assets/myimage6.jpeg" alt="Depth VI"/>
-        </div>
-        <div class="lb-meta">
-            <span class="lb-title">Depth VI</span>
-            <span class="lb-counter">06 / 08</span>
-        </div>
-    </div>
-</div>
-
-<!-- Lightbox 7 -->
-<div class="lightbox" id="lb-7">
-    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
-    <div class="lb-box">
-        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
-        <div class="lb-img-wrap">
-            <img src="assets/myimage.jpeg" alt="Visual VII"/>
-        </div>
-        <div class="lb-meta">
-            <span class="lb-title">Visual VII</span>
-            <span class="lb-counter">07 / 08</span>
-        </div>
-    </div>
-</div>
-
-<!-- Lightbox 8 -->
-<div class="lightbox" id="lb-8">
-    <a href="#Gallery" class="lb-backdrop" aria-label="Close"></a>
-    <div class="lb-box">
-        <a href="#Gallery" class="lb-close" aria-label="Close"><i class="fas fa-times"></i></a>
-        <div class="lb-img-wrap">
-            <img src="assets/myimage.jpeg" alt="Frame VIII"/>
-        </div>
-        <div class="lb-meta">
-            <span class="lb-title">Frame VIII</span>
-            <span class="lb-counter">08 / 08</span>
-        </div>
-    </div>
-</div>
-
-<!-- ======================== CONTACT SECTION ======================== -->
-<section class="contact-section" id="contact">
-
-    <!-- CSS particle background -->
-    <div class="ct-bg" aria-hidden="true">
-        <span class="ct-node cn1"></span>
-        <span class="ct-node cn2"></span>
-        <span class="ct-node cn3"></span>
-        <span class="ct-node cn4"></span>
-        <span class="ct-node cn5"></span>
-        <span class="ct-node cn6"></span>
-        <span class="ct-node cn7"></span>
-        <span class="ct-node cn8"></span>
-        <span class="ct-line cl1"></span>
-        <span class="ct-line cl2"></span>
-        <span class="ct-line cl3"></span>
-        <span class="ct-line cl4"></span>
-        <span class="ct-line cl5"></span>
-    </div>
-    <!-- Blobs -->
-    <div class="ct-blob ct-blob-1" aria-hidden="true"></div>
-    <div class="ct-blob ct-blob-2" aria-hidden="true"></div>
-
-    <div class="ct-container">
-
-        <!-- Header -->
-        <div class="ct-header">
-            <p class="ct-eyebrow">Get In Touch</p>
-            <h2 class="ct-title">Contact <span>Me</span></h2>
-            <p class="ct-subtitle">Have a project in mind? Let's build something great together.</p>
-        </div>
-
-        <!-- Main layout -->
-        <div class="ct-layout">
-
-            <!-- ======= LEFT — Info Panel ======= -->
-            <div class="ct-info">
-
-                <!-- Profile card -->
-                <div class="ct-profile-card">
-                    <div class="ct-avatar">
-                        <img src="assets/myimage1.jpeg" alt="Thushan Pahasara" />
-                        <div class="ct-avatar-ring"></div>
-                        <div class="ct-avatar-ring ct-avatar-ring--2"></div>
-                        <span class="ct-status-dot" aria-label="Available"></span>
-                    </div>
-                    <div class="ct-profile-text">
-                        <h3 class="ct-name">Thushan Pahasara</h3>
-                        <p class="ct-role">Full-Stack Learner &amp; UI Designer</p>
-                        <span class="ct-badge">
-                            <i class="fas fa-circle"></i> Available for work
-                        </span>
-                    </div>
-                </div>
-                <!-- Info items -->
-                <div class="ct-info-list">
-
-                    <!-- Email -->
-                    <a href="mailto:thushanpahasara04@gmail.com" class="ct-info-item">
-                        <div class="ct-info-icon" style="--ic: #e91e8c;">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="ct-info-text">
-                            <span class="ct-info-label">Email</span>
-                            <p class="ct-info-val">thushanpahasara04@gmail.com</p>
-                        </div>
-                        <i class="fas fa-arrow-up-right-from-square ct-info-arrow"></i>
-                    </a>
-                    <!-- Phone -->
-                    <a href="tel:+94769868180" class="ct-info-item">
-                        <div class="ct-info-icon" style="--ic: #4fc3f7;">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="ct-info-text">
-                            <span class="ct-info-label">Phone / WhatsApp</span>
-                            <p class="ct-info-val">+94 76 986 8180</p>
-                        </div>
-                        <i class="fas fa-arrow-up-right-from-square ct-info-arrow"></i>
-                    </a>
-                    <!-- Location -->
-                    <div class="ct-info-item">
-                        <div class="ct-info-icon" style="--ic: #9c27b0;">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="ct-info-text">
-                            <span class="ct-info-label">Location</span>
-                            <p class="ct-info-val">Sri Lanka </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Social row -->
-                <div class="ct-socials">
-                    <p class="ct-socials-label">Find Me On</p>
-                    <div class="ct-social-row">
-                        <a href="https://github.com/Thushan475"
-                           target="_blank"
-                           rel="noopener"
-                           class="ct-soc-btn ct-soc-github"
-                           aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#"
-                           class="ct-soc-btn ct-soc-linkedin"
-                           aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#"
-                           class="ct-soc-btn ct-soc-instagram"
-                           aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#"
-                           class="ct-soc-btn ct-soc-facebook"
-                           aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-            <!-- ======= RIGHT — Contact Form ======= -->
-            <form class="ct-form"
-                  action="mailto:thushanpahasara04@gmail.com"
-                  method="get"
-                  enctype="text/plain">
-
-                <!-- Name + Email row -->
-                <div class="ct-form-grid">
-
-                    <div class="ct-field">
-                        <label for="ct-fname" class="ct-label">
-                            <i class="fas fa-user"></i> Your Name
-                        </label>
-                        <input
-                                type="text"
-                                id="ct-fname"
-                                name="name"
-                                placeholder="Thushan Pahasara"
-                                autocomplete="name"
-                                required
-                        />
-                        <span class="ct-field-line"></span>
-                    </div>
-
-                    <div class="ct-field">
-                        <label for="ct-email" class="ct-label">
-                            <i class="fas fa-envelope"></i> Your Email
-                        </label>
-                        <input
-                                type="email"
-                                id="ct-email"
-                                name="email"
-                                placeholder="Thushan@example.com"
-                                autocomplete="email"
-                                required
-                        />
-                        <span class="ct-field-line"></span>
-                    </div>
-
-                </div>
-                <!-- Subject -->
-                <div class="ct-field">
-                    <label for="ct-subject" class="ct-label">
-                        <i class="fas fa-tag"></i> Subject
-                    </label>
-                    <input
-                            type="text"
-                            id="ct-subject"
-                            name="subject"
-                            placeholder="Project Inquiry..."
-                            required
-                    />
-                    <span class="ct-field-line"></span>
-                </div>
-                <!-- Message -->
-                <div class="ct-field">
-                    <label for="ct-msg" class="ct-label">
-                        <i class="fas fa-comment-dots"></i> Message
-                    </label>
-                    <textarea
-                            id="ct-msg"
-                            name="body"
-                            rows="5"
-                            placeholder="Hi Thushan, I'd love to discuss a project with you..."
-                            required
-                    ></textarea>
-                    <span class="ct-field-line"></span>
-                </div>
-
-                <!-- Submit button -->
-                <button type="submit" class="ct-submit">
-                    <span class="ct-submit-text">
-                        <i class="fas fa-paper-plane"></i> Send Message
-                    </span>
-                    <span class="ct-submit-glow"></span>
-                </button>
-
-            </form>
-
-        </div>
-
-
-        <!-- Footer ticker strip -->
-        <div class="ct-footer-strip" aria-hidden="true">
-            <span>&#10022; LET'S BUILD SOMETHING AMAZING</span>
-            <span>&#10022; OPEN TO FREELANCE</span>
-            <span>&#10022; AVAILABLE FOR HIRE</span>
-            <span>&#10022; LET'S BUILD SOMETHING AMAZING</span>
-            <span>&#10022; OPEN TO FREELANCE</span>
-            <span>&#10022; AVAILABLE FOR HIRE</span>
-        </div>
-
-    </div>
-</section>
 
 </body>
 </html>
