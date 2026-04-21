@@ -923,8 +923,66 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
     margin-top:            10px;
 }
 
+/* Individual case card */
+.case-card {
+    background:    var(--glass-bg);
+    border:        1px solid var(--glass-border);
+    border-radius: 16px;
+    padding:       30px 25px ;
+    display:       flex;
+    flex-direction:column;
+    gap:           20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition:    transform .3s var(--ease),
+    border-color .3s ease,
+    box-shadow .3s ease;
+    position:      relative;
+    overflow:      hidden;
+    min-height: 250px;
+}
 
+.case-card::before {
+    content:    '';
+    position:   absolute;
+    inset:      0;
+    background: linear-gradient(135deg, rgba(233,30,140,.05) 0%, transparent 60%);
+    opacity:    0;
+    transition: opacity .3s ease;
+    border-radius: inherit;
+}
+.case-card:hover {
+    transform:    translateY(-6px);
+    border-color: rgba(233, 30, 140, 0.4);
+    box-shadow:   0 16px 48px rgba(233, 30, 140, 0.12),
+    0 4px 16px rgba(0,0,0,0.4);
+}
+.case-card:hover::before { opacity: 1; }
 
+case-num-badge {
+    font-family: var(--font-main);
+    font-size:      1.4rem;
+    font-weight:    800;
+    letter-spacing: -.02em;
+    line-height:    1;
+    background:     linear-gradient(135deg, var(--pink), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.case-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.case-title {
+    font-family: var(--font-main);
+    font-size:   1.3rem;
+    font-weight: 700;
+    color:       var(--white);
+    margin-bottom: 0;
+}
 
 /* =====================================================================
    11. GALLERY SECTION
