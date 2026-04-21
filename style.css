@@ -923,7 +923,6 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
     margin-top:            10px;
 }
 
-/* Individual case card */
 .case-card {
     background:    var(--glass-bg);
     border:        1px solid var(--glass-border);
@@ -941,7 +940,6 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
     overflow:      hidden;
     min-height: 250px;
 }
-
 .case-card::before {
     content:    '';
     position:   absolute;
@@ -959,8 +957,9 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 .case-card:hover::before { opacity: 1; }
 
-case-num-badge {
-    font-family: var(--font-main);
+
+.case-num-badge {
+    font-family:    var(--font-main);
     font-size:      1.4rem;
     font-weight:    800;
     letter-spacing: -.02em;
@@ -970,12 +969,14 @@ case-num-badge {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+
 .case-body {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
+
 .case-title {
     font-family: var(--font-main);
     font-size:   1.3rem;
@@ -984,6 +985,64 @@ case-num-badge {
     margin-bottom: 0;
 }
 
+.case-desc {
+    font-family: var(--font-body);
+    font-size:   1.0rem;
+    color:       var(--muted);
+    line-height: 1.5;
+}
+
+.case-actions {
+    display:    flex;
+    gap:        10px;
+    margin-top: auto;
+    padding-top: 6px;
+}
+
+.case-btn {
+    flex:           1;
+    display:        inline-flex;
+    align-items:    center;
+    justify-content:center;
+    gap:            5px;
+    padding:        9px 8px;
+    border-radius:  8px;
+    font-family:    var(--font-main);
+    font-size:      0.72rem;
+    font-weight:    700;
+    letter-spacing: .03em;
+    cursor:         pointer;
+    transition:     all .28s var(--ease);
+    text-decoration: none;
+    border:         1px solid transparent;
+}
+.case-btn i { font-size: 0.7rem; }
+
+.case-btn--view {
+    background:   rgba(79, 195, 247, 0.12);
+    border-color: rgba(79, 195, 247, 0.3);
+    color:        var(--blue);
+}
+.case-btn--view:hover {
+    background:   var(--blue);
+    border-color: var(--blue);
+    color:        #0a0a0f;
+    box-shadow:   0 0 20px rgba(79, 195, 247, 0.35);
+    transform:    translateY(-2px);
+}
+
+.case-btn--github {
+    background:   rgba(233, 30, 140, 0.08);
+    border-color: rgba(233, 30, 140, 0.3);
+    color:        var(--pink);
+}
+.case-btn--github:hover {
+    background:   var(--pink);
+    border-color: var(--pink);
+    color:        #fff;
+    box-shadow:   0 0 20px rgba(233, 30, 140, 0.35);
+    transform:    translateY(-2px);
+}
 /* =====================================================================
    11. GALLERY SECTION
    ===================================================================== */
