@@ -1501,6 +1501,44 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
     box-shadow:   0 0 24px rgba(233, 30, 140, 0.4);
     transform:    translateY(-2px);
 }
+/* =====================================================================
+   RESPONSIVE - project / assigment
+   ===================================================================== */
+@media (max-width: 1100px) {
+    .cases-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .case-card {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    .cases-grid {
+        grid-template-columns: 1fr;
+    }
+    .case-actions {
+        flex-direction: row;
+    }
+    .project-img-wrap {
+        height: 200px;
+    }
+    .case-title {
+        font-size: 1rem;
+    }
+    .project-title {
+        font-size: 1.1rem;
+    }
+}
 
 /* =====================================================================
    11. GALLERY SECTION
