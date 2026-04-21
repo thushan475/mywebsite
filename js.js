@@ -87,3 +87,25 @@ document.querySelectorAll('.skill-card').forEach(c => io.observe(c));
         }
     });
 })();
+
+// ── Lightbox scroll-lock  ──────────────────────────────────────────
+document.addEventListener('click', function (e) {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (!anchor) return;
+
+    const href = anchor.getAttribute('href');
+
+    if (href.startsWith('#lb') || href.startsWith('#as-lb') || href.startsWith('#project')) {
+        document.body.classList.add('no-scroll');
+    }
+
+    if (href === '#') {
+        document.body.classList.remove('no-scroll');
+    }
+});
+
+window.addEventListener('hashchange', function () {
+    if (!location.hash) {
+        document.body.classList.remove('no-scroll');
+    }
+});
