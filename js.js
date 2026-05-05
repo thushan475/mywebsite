@@ -15,40 +15,7 @@ function type() {
 }
 type();
 
-const dot = document.querySelector('.cursor-dot');
-const ring = document.querySelector('.cursor-ring');
-let mx = 0, my = 0, rx = 0, ry = 0;
-const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
 
-if (isTouchDevice) {
-    if (dot) dot.style.display = 'none';
-    if (ring) ring.style.display = 'none';
-} else {
-    document.addEventListener('mousemove', e => {
-        mx = e.clientX; my = e.clientY;
-        dot.style.transform = `translate(${mx}px,${my}px)`;
-        const t = document.createElement('div');
-        t.className = 'mouse-trail';
-        Object.assign(t.style, {
-            left: mx + 'px', top: my + 'px',
-            background: Math.random() > .5 ? 'var(--pink)' : 'var(--blue)',
-            boxShadow: Math.random() > .5 ? '0 0 10px var(--pink)' : '0 0 10px var(--blue)'
-        });
-        document.body.appendChild(t);
-        setTimeout(() => t.remove(), 800);
-    });
-
-    (function loop() {
-        rx += (mx - rx) * .12; ry += (my - ry) * .12;
-        ring.style.transform = `translate(${rx}px,${ry}px)`;
-        requestAnimationFrame(loop);
-    })();
-
-    document.querySelectorAll('a,button').forEach(el => {
-        el.addEventListener('mouseenter', () => { ring.style.width = ring.style.height = '50px'; ring.style.borderColor = 'rgba(156,39,176,.6)'; });
-        el.addEventListener('mouseleave', () => { ring.style.width = ring.style.height = '36px'; ring.style.borderColor = 'rgba(233,30,140,.55)'; });
-    });
-}
 
 const pc = document.getElementById('particles');
 if (pc) for (let i = 0; i < 30; i++) {
