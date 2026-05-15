@@ -15,7 +15,7 @@ function type() {
 }
 type();
 
-
+// particles
 
 const pc = document.getElementById('particles');
 if (pc) for (let i = 0; i < 30; i++) {
@@ -26,6 +26,7 @@ if (pc) for (let i = 0; i < 30; i++) {
     pc.appendChild(p);
 }
 
+// skill-card
 const io = new IntersectionObserver(entries => {
     entries.forEach((entry, idx) => {
         if (entry.isIntersecting) {
@@ -34,7 +35,10 @@ const io = new IntersectionObserver(entries => {
         }
     });
 }, { threshold: 0.12 });
+
 document.querySelectorAll('.skill-card').forEach(c => io.observe(c));
+
+// navbar
 
 (function () {
     var nav = document.querySelector('.navbar');
@@ -55,7 +59,7 @@ document.querySelectorAll('.skill-card').forEach(c => io.observe(c));
     });
 })();
 
-// ── Lightbox scroll-lock  ──────────────────────────────────────────
+//Lightbox scroll-lock
 document.addEventListener('click', function (e) {
     const anchor = e.target.closest('a[href^="#"]');
     if (!anchor) return;
